@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GHVHS_Intranet_FaxModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'GHVHS_Intranet_Fax.dbo.tblInfusionFaxReceivedFaxes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblInfusionFaxReceivedFaxes">
+          <Key>
+            <PropertyRef Name="FaxID" />
+          </Key>
+          <Property Name="FaxID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CallerID" Type="varchar" MaxLength="50" />
+          <Property Name="CSID" Type="varchar" MaxLength="50" />
+          <Property Name="ID" Type="varchar" MaxLength="50" />
+          <Property Name="Pages" Type="varchar" MaxLength="50" />
+          <Property Name="RoutingInfo" Type="varchar" MaxLength="50" />
+          <Property Name="FaxSize" Type="varchar" MaxLength="50" />
+          <Property Name="TransmissionStart" Type="varchar" MaxLength="50" />
+          <Property Name="TransmissionEnd" Type="varchar" MaxLength="50" />
+          <Property Name="TSID" Type="varchar" MaxLength="50" />
+          <Property Name="FileName" Type="varchar" MaxLength="75" />
+          <Property Name="CurrentFaxStatus" Type="varchar" MaxLength="10" />
+          <Property Name="FileLocation" Type="varchar" MaxLength="150" />
+          <Property Name="ArchiveDate" Type="datetime" />
+          <Property Name="UpDatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="UpDatedDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="GHVHS_Intranet_FaxModelStoreContainer">
+          <EntitySet Name="tblInfusionFaxReceivedFaxes" EntityType="Self.tblInfusionFaxReceivedFaxes" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblInfusionFaxReceivedFaxes].[FaxID] AS [FaxID], 
+    [tblInfusionFaxReceivedFaxes].[CallerID] AS [CallerID], 
+    [tblInfusionFaxReceivedFaxes].[CSID] AS [CSID], 
+    [tblInfusionFaxReceivedFaxes].[ID] AS [ID], 
+    [tblInfusionFaxReceivedFaxes].[Pages] AS [Pages], 
+    [tblInfusionFaxReceivedFaxes].[RoutingInfo] AS [RoutingInfo], 
+    [tblInfusionFaxReceivedFaxes].[FaxSize] AS [FaxSize], 
+    [tblInfusionFaxReceivedFaxes].[TransmissionStart] AS [TransmissionStart], 
+    [tblInfusionFaxReceivedFaxes].[TransmissionEnd] AS [TransmissionEnd], 
+    [tblInfusionFaxReceivedFaxes].[TSID] AS [TSID], 
+    [tblInfusionFaxReceivedFaxes].[FileName] AS [FileName], 
+    [tblInfusionFaxReceivedFaxes].[CurrentFaxStatus] AS [CurrentFaxStatus], 
+    [tblInfusionFaxReceivedFaxes].[FileLocation] AS [FileLocation], 
+    [tblInfusionFaxReceivedFaxes].[ArchiveDate] AS [ArchiveDate], 
+    [tblInfusionFaxReceivedFaxes].[UpDatedBy] AS [UpDatedBy], 
+    [tblInfusionFaxReceivedFaxes].[UpDatedDate] AS [UpDatedDate]
+    FROM [dbo].[tblInfusionFaxReceivedFaxes] AS [tblInfusionFaxReceivedFaxes]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GHVHS_Intranet_FaxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblInfusionFaxReceivedFax">
+          <Key>
+            <PropertyRef Name="FaxID" />
+          </Key>
+          <Property Name="FaxID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CallerID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pages" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RoutingInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FaxSize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransmissionStart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransmissionEnd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FileName" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="CurrentFaxStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="FileLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ArchiveDate" Type="DateTime" Precision="3" />
+          <Property Name="UpDatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UpDatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="GHVHS_Intranet_FaxEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblInfusionFaxReceivedFaxes" EntityType="Self.tblInfusionFaxReceivedFax" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GHVHS_Intranet_FaxModelStoreContainer" CdmEntityContainer="GHVHS_Intranet_FaxEntities">
+          <EntitySetMapping Name="tblInfusionFaxReceivedFaxes">
+            <EntityTypeMapping TypeName="GHVHS_Intranet_FaxModel.tblInfusionFaxReceivedFax">
+              <MappingFragment StoreEntitySet="tblInfusionFaxReceivedFaxes">
+                <ScalarProperty Name="FaxID" ColumnName="FaxID" />
+                <ScalarProperty Name="CallerID" ColumnName="CallerID" />
+                <ScalarProperty Name="CSID" ColumnName="CSID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Pages" ColumnName="Pages" />
+                <ScalarProperty Name="RoutingInfo" ColumnName="RoutingInfo" />
+                <ScalarProperty Name="FaxSize" ColumnName="FaxSize" />
+                <ScalarProperty Name="TransmissionStart" ColumnName="TransmissionStart" />
+                <ScalarProperty Name="TransmissionEnd" ColumnName="TransmissionEnd" />
+                <ScalarProperty Name="TSID" ColumnName="TSID" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="CurrentFaxStatus" ColumnName="CurrentFaxStatus" />
+                <ScalarProperty Name="FileLocation" ColumnName="FileLocation" />
+                <ScalarProperty Name="ArchiveDate" ColumnName="ArchiveDate" />
+                <ScalarProperty Name="UpDatedBy" ColumnName="UpDatedBy" />
+                <ScalarProperty Name="UpDatedDate" ColumnName="UpDatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

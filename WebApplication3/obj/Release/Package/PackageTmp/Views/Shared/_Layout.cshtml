@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - GHVHS</title>
+    <script type="text/javascript" src="~/Scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/main.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Uploader.css">
+    
+</head>
+<body>
+  
+
+    <div id="canvas" class="canvas">
+        <script type="text/javascript">
+            var homePage = "";
+            GHVHS.DOM.Header();
+            
+        </script>
+        <div class="MainContent" id="MainContent">
+            @RenderBody()
+            
+            
+        </div>
+        
+
+
+    </div>
+
+    <script>
+        var getmain = document.getElementById("MainContent");
+        var getHeader = document.getElementById("header");
+        if (document.getElementById("canvas").offsetWidth < 950) {
+            getHeader.style.height = "16%";
+        }
+        getmain.style.marginTop =(getHeader.offsetHeight+20) + "px";
+        if (homePage != "Y") {
+            GHVHS.DOM.DrawFooter();
+            document.getElementById("Footer").style.marginTop = "1.5%";
+        }
+        var getHeaderNav = document.getElementById('headerPartOne');
+        var navs = getHeaderNav.querySelectorAll(".NavItem");
+        if (document.getElementById("canvas").offsetWidth < 1400) {
+            for(var i = 0; i < navs.length; i++) {
+                navs[i].style.fontSize = "14px";
+                navs[i].style.backgroundImage = "url()";
+                navs[i].style.height = (document.getElementById('headerPartOne').offsetHeight - 25)+ "px";
+            }
+        }
+        
+        document.getElementById("MainContent").onmouseover = function () {
+            var getHeaderNav = document.getElementById('headerPartOne');
+            var navs = getHeaderNav.querySelectorAll(".NavItem");
+            for (var i = 0; i < navs.length; i++) {
+                if (navs[i].style.backgroundColor == "rgba(64, 0, 23, 0.9)") {
+                    navs[i].click();
+                }
+
+            }
+        }
+        window.onresize = function () {
+            window.location.href = window.location.href;
+        }
+       
+    </script>      
+
+    
+
+    
+
+   
+    @RenderSection("scripts", required: false)
+</body>
+</html>

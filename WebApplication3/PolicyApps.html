@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="http://garnetinfo/img/FavIcon.png" />
+    <title> Pnp Directory</title>
+
+    <script type="text/javascript" src="http://garnetinfo/Scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://garnetinfo/Content/main.css">
+    <link rel="stylesheet" type="text/css" href="http://garnetinfo/Content/Uploader.css">
+    <style>
+          
+        
+    </style>
+</head>
+<body>
+
+
+    <div id="canvas" class="canvas">
+        <script type="text/javascript">
+            var homePage = "";
+            GHVHS.DOM.Header();
+
+        </script>
+        <div class="MainContent" id="MainContent">
+           
+
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        
+    
+            var fileObj = {
+                "fileModel": {
+                    "route": "Foundation",
+                    "path": "",
+                    "Html": null,
+                    "files":"[{\"link\":\"\",\"Content\":\"[To Parent Directory]\",\"ParentLink\":null,\"ParentContent\":null}]",
+                    "pageSections": null,
+                    "websites": "[{\"link\":\"http://ghinfo/PnP2/\",\"Content\":\"Policies And Procedures OLD\",\"ParentLink\":null,\"ParentContent\":null},{\"link\":\"http://garnetinfo/PnP/Home\",\"Content\":\"Policies And Procedures New Platform\",\"ParentLink\":null,\"ParentContent\":null}]",
+                    "Images": "http://garnetinfo/img/PnP.jpg||",
+                    "Title": "Policies And Procedures",
+                    "DisplayOrNot": null,
+                    "Contacts": null,
+                    "SubHeader": null
+                }
+            }
+            var Files = GHVHS.DOM.create({ "Type": "div", "Class": "Files", "Id": "Files", "Parent": document.getElementById("MainContent") });
+            //GHVHS.DOM.ScanFiles("@ViewData["Route"]", "@ViewData["Path"]",files , Files);
+            var LoadingFiles = GHVHS.DOM.create({ "Type": "img", "Class": "LoadingFiles", "Id": "LoadingFiles","Src":"/img/LoadingFiles.gif", "Parent": Files });
+            GHVHS.DOM.ScanFiles(fileObj, ["Policies And Procedures", "", Files]);
+
+
+        
+            document.getElementById("MainContent").style.height = "auto";
+
+            var tobring = setTimeout(function () {
+
+                document.getElementById("Footer").style.marginTop = "10%";
+            }, 400);
+            var getmain = document.getElementById("MainContent");
+            var getHeader = document.getElementById("header");
+            if (document.getElementById("canvas").offsetWidth < 950) {
+                getHeader.style.height = "16%";
+            }
+            getmain.style.marginTop = (getHeader.offsetHeight + 20) + "px";
+            if (homePage != "Y") {
+                GHVHS.DOM.DrawFooter();
+                document.getElementById("Footer").style.marginTop = "1.5%";
+            }
+            var getHeaderNav = document.getElementById('headerPartOne');
+            var navs = getHeaderNav.querySelectorAll(".NavItem");
+            if (document.getElementById("canvas").offsetWidth < 1400) {
+                for (var i = 0; i < navs.length; i++) {
+                    navs[i].style.fontSize = "14px";
+                    navs[i].style.backgroundImage = "url()";
+                    navs[i].style.height = (document.getElementById('headerPartOne').offsetHeight - 25) + "px";
+                }
+            }
+
+            document.getElementById("MainContent").onmouseover = function () {
+                var getHeaderNav = document.getElementById('headerPartOne');
+                var navs = getHeaderNav.querySelectorAll(".NavItem");
+                for (var i = 0; i < navs.length; i++) {
+                    if (navs[i].style.backgroundColor == "rgb(92, 10, 58)") {
+                        if (navs[i].id != "div||1") {
+                            navs[i].click();
+                        } else {
+                            navs[i].style.backgroundColor = "white";
+                            navs[i].style.color = "#5c0a3a";
+                        }
+                    }
+
+                }
+            }
+            window.onresize = function () {
+                window.location.href = window.location.href;
+            }
+            GHVHS.DOM.handleScrollMain();
+        </script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+

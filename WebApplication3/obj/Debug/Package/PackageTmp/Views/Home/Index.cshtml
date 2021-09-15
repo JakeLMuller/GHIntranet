@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script>
+   
+    homePage = "Y";
+    GHVHS.DOM.covidInfo(document.getElementById("MainContent"));
+    GHVHS.DOM.DrawCards();
+   
+    GHVHS.DOM.GetNewData();
+    GHVHS.DOM.getWeatherdata({ "id": "TopSideContainer" });
+    GHVHS.DOM.getAccounments();
+    GHVHS.DOM.getUpComingEvents();
+   
+
+</script>

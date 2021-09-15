@@ -1,0 +1,28 @@
+﻿
+
+@{
+    ViewData["Title"] = ViewData["Route"];
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var AllFilesJson = jss.Serialize(ViewBag.fileModel);
+}
+
+
+
+    
+        
+        
+    <script>
+
+        var files = @Html.Raw(AllFilesJson);
+        var Files = GHVHS.DOM.create({ "Type": "div", "Class": "Files", "Id": "Files", "Parent": document.getElementById("MainContent") });
+        GHVHS.DOM.ScanFiles("@ViewData["Route"]", "@ViewData["Path"]",files , Files);
+
+
+        document.getElementById("MainContent").style.height = "auto";
+
+        var tobring = setTimeout(function () {
+
+            document.getElementById("Footer").style.marginTop = "10%";
+        }, 400);
+
+    </script>

@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<script type="text/javascript" src="~/Scripts/main.js"></script>
+<script type="text/javascript" src="~/Scripts/appdemo.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/AppDemo.css">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div id="canvas" class="canvas">
+        <div class="topNav" id="topNav"></div>
+        <div class="mainContent" id="mainContent"></div>
+        <div class="bottomNav" id="bottomNav"></div>
+    </div>
+    <script>
+        app.TopNav();
+        app.DrawMainContent("Symtom Checker");
+        app.DrawFootNav("Symtom Checker")
+    </script>
+</body>
+</html>

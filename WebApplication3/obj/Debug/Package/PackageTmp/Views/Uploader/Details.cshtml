@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Uploads";
+}
+
+<script type="text/javascript" src="~/Scripts/Uploads.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/Uploader.css">
+
+<script>
+    var j= "@ViewData["json"]";
+    Uploader.SingleView(j, "@ViewData["username"]");
+    var tobring = setTimeout(function () {
+        document.getElementById("header").style.display = "none";
+        document.getElementById("Footer").style.display = "none";
+        document.getElementById("MainContent").style.marginTop = "20px";
+    }, 100);
+
+</script>

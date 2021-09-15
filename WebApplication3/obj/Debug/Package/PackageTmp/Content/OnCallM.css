@@ -1,0 +1,556 @@
+﻿#App{
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color:rgba(64, 0, 23,0.85);
+}
+.TopBarM{
+    height:5%; 
+    width:100%;
+    float:left;
+}
+.SideMenu{
+    height:100%; 
+    width: 60%; 
+    background-color:white;
+    float:left;
+    box-shadow:2px 2px 20px black;
+    left: -1000px;
+    position:absolute;
+    transition:left 0.3s ease;
+    border-right:4px solid #a8b2bb;
+    top:0px;
+    z-index:70000000000000000000000000000;
+}
+.menu{
+    height:90%; 
+    float:left;
+    width:2%;
+    margin-top:0.2%;
+    margin-left:3%;
+    cursor:pointer;
+}
+.menu:hover{
+    transform:scale(1.05);
+}
+.menu2{
+    height:90%; 
+    float:left;
+    width:8%;
+    margin-top:0.2%;
+    margin-left:3%;
+    cursor:pointer;
+}
+.menu2:hover{
+   height:95%;
+   margin-top:0.1%;
+  
+}
+.MonthYearContainer{
+    width:20%;
+    height:50%;
+    padding-top:2%;
+    float:left;
+    margin-left:13%;
+}
+.MonthText{
+    height:auto;
+    width:auto; 
+    float:left;
+    font-size:110%;
+    color:white;
+    font-weight:bold;
+
+}
+.DepartmentContainer{
+    width:50%;
+    height:50%;
+    padding-top:2%;
+    float:left;
+    margin-left:5%;
+}
+.YearText{
+    height:auto;
+    width:auto; 
+    float:left;
+    font-size:90%;
+    color:white;
+    padding-top:1%;
+    margin-left:5%;
+}
+.linkContainer{
+    width:100%;
+    height:80%;
+    float:left;
+    margin-top:5%;
+
+}
+.links{
+    width:80%;
+    height:auto;
+    margin-left:5%;
+    margin-top:6%;
+    margin-bottom:6%;
+    font-size:200%;
+    color: #a8b2bb;
+    font-weight:bold;
+    float:left;
+}
+.Selected{
+    width:80%;
+    height:auto;
+    margin-left:5%;
+    margin-top:5%;
+    margin-bottom:6%;
+    font-size:300%;
+    color:rgba(64, 0, 23,0.8);
+    font-weight:bold;
+    float:left;
+}
+.LogoContainer{
+    width:100%;
+    height:15%;
+    float:left;
+}
+.logo{
+    height:auto;
+    width:105%;
+    max-height:90%;
+    margin-left:-5%;
+    float:left;    
+}
+.LogoText{
+    height:auto;
+    width:80%;
+    float:left;
+    font-size:150%;
+    color:rgba(64, 0, 23,0.7);
+    text-align:center;
+    font-weight:bold;
+    margin-top:-10%;
+}
+.MonthCalander{
+    width:100%;
+    height:94.9%;
+    float:left;
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+    border-top:1px solid silver;
+    background-color:white;
+    transition:height .4s ease;
+}
+.WeekDaysContainer{
+    width:100%;
+    height:5%;
+    float:left;
+}
+.DayName{
+    width:14%;
+    height:45%;
+    float:left;
+    padding-top:1%;
+    color:rgba(64, 0, 23,0.7);
+    font-weight:bold;
+    text-align:center;
+}
+.SingleMonthDay{
+    width:14.2%;
+    height:18%;
+    box-shadow:1px 1px 3px silver;
+    float:left;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.SingleMonthDaySelected{
+    width:14.2%;
+    height:18%;
+    background-color:white;
+    float:left;
+    box-shadow:3px 3px 6px black;
+     overflow-y:auto;
+    overflow-x:hidden;
+}
+.DayLabelOld{
+    height:2%;
+    width:auto;
+    text-align:center;
+    padding-top:0.5%;
+    font-size:100%;
+    float:left;
+    color:silver;
+}
+.DayLabel{
+    height:auto;
+    width:auto;
+    text-align:center;
+    padding-top:0.5%;
+    font-size:100%;
+    font-weight:bold;
+    float:left;
+    color:black;
+}
+.DayLabelSelected{
+    height:auto;
+    width:auto;
+    text-align:center;
+    padding-top:2px;
+    padding-left:2px;
+    padding-right:5px;
+    padding-bottom:5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px; 
+    font-size:70%;
+    float:left;
+    box-shadow:3px 3px 6px grey;
+    color:white;
+    background-color:blue;
+}
+.ScheduleForDay{
+    width:100%;
+    height:auto;
+    padding-top:5%;
+    padding-bottom:10%;
+    float:left;
+    color:rgba(64, 0, 23,0.8);
+    font-size:65%;
+    margin-top:10%;
+    background-color:rgba(64, 0, 23,0.2);
+    text-align:center;
+    border-radius:5px;
+    animation: 0.5s fromLeft;
+}
+.BottomContainer{
+    float:left;
+    width:100%;
+    height:44.4%;
+    margin-top:0.11%;
+    background-color:white;
+    background-color:rgba(64, 0, 23,0.7);
+}
+.BottomContainerRight{
+    float:left;
+    width:100%;
+    height:44.4%;
+    margin-top:0.11%;
+    background-color:white;
+    background-color:rgba(64, 0, 23,0.7);
+    transition: left .5s ease;
+    animation: 0.5s fromMRight;
+}
+.BottomContainerLeft{
+    float:left;
+    width:100%;
+    height:44.4%;
+    margin-top:0.11%;
+    background-color:white;
+    background-color:rgba(64, 0, 23,0.7);
+    animation: 0.5s fromMLeft;
+}
+@keyframes  fromMRight{
+  from {
+   margin-left: 100%;
+  }
+
+  to {
+   margin-left: 0%;
+  }
+}
+@keyframes  fromMLeft{
+  from {
+   margin-left: -100%;
+  }
+
+  to {
+   margin-left: 0%;
+  }
+}
+.DateHeader{
+    height:10%;
+    width:90%;
+    float:left;
+    padding-top:2%;
+    border-top:1px solid silver;
+    padding-left:10%;
+    font-size:150%;
+    color:white;
+    font-weight:bold;
+}
+
+.DateSchedule{
+    position:relative;
+    height:90%;
+    width:100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.SlideUpDay{
+    position:relative;
+    height:93%;
+    width:100%;
+    animation: 0.5s fromTops;
+    border-radius:20px;
+    top:8%;
+    background-color:white;
+    transition: left .5s ease;
+    left:0px;
+}
+.SlideFromRightDay{
+     position:relative;
+    height:93%;
+    width:100%;
+    animation: 0.5s fromRight;
+    border-radius:20px;
+    top:8%;
+    background-color:white;
+     transition: left .5s ease;
+     left:0px;
+}
+.SlideFromLeftDay{
+     position:relative;
+    height:93%;
+    width:100%;
+    animation: 0.5s fromLeft;
+    border-radius:20px;
+    top:8%;
+    background-color:white;
+    transition: left .5s ease;
+    left:0px;
+}
+.whiteX2 {
+    height: 25px;
+    width: 25px;
+    Top: 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+@keyframes  fromRight{
+  from {
+   left: 100%;
+  }
+
+  to {
+   left: 0%;
+  }
+}
+@keyframes  fromLeft{
+  from {
+   left: -100%;
+  }
+
+  to {
+   left: 0%;
+  }
+}
+@keyframes  fromTops{
+  from {
+    Top: 100%;
+  }
+
+  to {
+    Top: 10%;
+  }
+}
+.allSubInfo{
+    width:100%;
+    height:auto;
+    float:left;
+    background-color:white;
+    box-shadow:2px 2px 4px black;
+}
+.allSubInfoSU{
+    width:100%;
+    height:auto;
+    float:left;
+    background-color:rgba(64, 0, 23,0.8);
+    box-shadow:2px 2px 4px black;
+}
+.DateHeaderSU{
+    height:10%;
+    width:90%;
+    float:left;
+    padding-top:2%;
+    padding-left:10%;
+    font-size:150%;
+    color:black;
+    font-weight:bold;
+}
+.SingleInfoSU{
+    width:100%;
+    height:auto;
+    float:left;
+    font-size:150%;
+    text-align:center;
+    text-shadow:0.1px 0.1px 1px grey;
+    color: white;
+} 
+.SingleInfo{
+    width:100%;
+    height:auto;
+    float:left;
+    font-size:150%;
+    text-align:center;
+    text-shadow:0.1px 0.1px 1px grey;
+}  
+.contactInfo{
+    width:100%;
+    height:auto;
+    float:left;
+    font-size:100%;
+    color:white;
+    margin-top:1%;
+    text-align:center;
+    text-shadow:0.1px 0.1px 1px grey;
+} 
+.contactInfoSU{
+    width:100%;
+    height:auto;
+    float:left;
+    font-size:130%;
+    color:black;
+    margin-top:1%;
+    text-align:center;
+    text-shadow:0.1px 0.1px 1px grey;
+} 
+.Time{
+    width:100%;
+    height:auto;
+    float:left;
+    color:black;
+    font-size:250%;
+    text-shadow:0.1px 0.1px 1px grey;
+}
+.TimeSU{
+    width:100%;
+    height:auto;
+    float:left;
+    color:white;
+    font-size:280%;
+    text-shadow:0.1px 0.1px 1px grey;
+}
+.Schedule{
+    width:100%; 
+    height:auto;
+    float:left; 
+    background-color:white;
+
+}
+.slideUpSmall{
+    height:45%;
+    width:100%;
+    top:55%;
+    position:relative;
+    background-color:white; 
+    animation: 0.5s toBottomScreen;
+    transition: top .5s ease;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+}
+@keyframes  toBottomScreen{
+  from {
+    Top: 100%;
+  }
+
+  to {
+    Top: 55%;
+  }
+}
+.SlideUpSmallHeader{
+    width:95%;
+    padding-left:5%;
+    height:7%;
+    float:left;
+    padding-top:1%;
+    color:black;
+    font-size:130%;
+    
+}
+.SlideUpSmallBody{
+    width:100%;
+    height:91%;
+    float:left;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.SingleDepartment{
+    height:auto; 
+    width:90%;
+    padding-left:2.5%;
+    float:left;
+    color:rgba(64, 0, 23,0.8);
+    font-size:125%;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+.HourLabel{
+    padding-top: 1.5%;
+    height: 30px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-size: 130%;
+    border-bottom: 1px solid white;
+    color:white;
+}
+.TimesCol {
+    height: 100%;
+    margin-bottom: 2%;
+    border-left: 1px solid rgb(64, 0, 23);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 12%;
+    float: left;
+    background-color: rgba(64, 0, 23,0.95);
+}
+.DateCol {
+    height: 100%;
+    margin-bottom: 2%;
+    padding-left:1%;
+    padding-bottom: 1%;
+    width: 80%;
+    float: left;
+    background-color: white;
+}
+.coloredHour{
+    padding-top: 1.5%;
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-size: 130%;
+    background-color: blue;
+    color: white;
+    border: 3px solid rgb(0, 102, 153);
+    border-radius: 10px;
+    background-color: #5DADE2;
+    box-shadow: 2px 2px 6px grey;
+    transition:left .35s ease;
+}
+.coloredHour2{
+    padding-top: 1.5%;
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-size: 130%;
+    background-color: blue;
+    color: white;    
+    background-color: rgb(255, 144, 0);
+    border: 2px solid rgb(255, 37, 0);
+    border-radius: 10px;
+}
+.NotColoredHour{
+    padding-top: 1.5%;
+    height: 30px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-size: 130%;
+    
+}

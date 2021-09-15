@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Daily On-Call";
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var dt = jss.Serialize(ViewBag.Calls);
+    var gp = jss.Serialize(ViewBag.AllGroups);
+    var AllPeople = jss.Serialize(ViewBag.AllPeopleInGroup);
+    var SelectedGroup = jss.Serialize(ViewBag.selectedGroup);
+
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string OnCallJS = "/Scripts/OnCall.js?v=" + version;
+    string OnCallCss = "/Content/OnCall.css?v=" + version;
+}
+
+<script type="text/javascript" src="@OnCallJS"></script>
+<link rel="stylesheet" type="text/css" href="@OnCallCss">
+
+
+
+
+<script>
+    var Groups = @Html.Raw(gp);
+    var Data = @Html.Raw(dt);
+    var allPeople = @Html.Raw(AllPeople);
+    var Selected = @Html.Raw(SelectedGroup);
+    OnCallDeskTop.DrawDalyView("@ViewData["groupId"]", "@ViewData["DayOfTheWeek"]", "@ViewData["date"]", "@ViewData["UserName"]", Selected, Groups, Data, "@ViewData["Access"]", allPeople, "@ViewData["Admin"]" );
+
+</script>
+

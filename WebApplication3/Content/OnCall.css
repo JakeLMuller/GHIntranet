@@ -1,0 +1,1327 @@
+﻿body {
+}
+.OnCallContainer{
+    height:100%;
+    width:100%;
+    float:left;
+    margin-top:-1.15%;
+
+}
+.TopBar{
+    height:8%; 
+    width:100%;
+    float:left;
+    background-color:rgba(64, 0, 23,0.95);
+}
+.WelUser{
+    height:20%;
+    padding-top:1.5%;
+    padding-left:3%;
+    font-size:110%; 
+    width:15%;
+    color:white;
+    float:left;
+  
+}
+.TOnCall{
+    height:20%;
+    padding-top:0.8%;
+    padding-left:3%;
+    font-size:200%; 
+    width:60%;
+    margin-left:10%;
+    color:white;
+    text-align:center;
+    float:left;
+}
+.ViewContainer{
+    height:100%;
+    width:47%;
+    float:left;
+}
+.FillerView{
+    height:20%;
+    padding-top:3%;
+    padding-left:3%;
+    float:left;
+    width:25%;
+}
+.SingleViewContainer{
+    height:20%;
+    padding-top:3%;
+    cursor:pointer;
+    padding-bottom:3.5%;
+    font-size:120%; 
+    text-align:center;
+    width:17%;
+    color:white;
+    float:left;
+}
+.SingleViewContainer:hover{
+    background-color:white;
+    color:rgba(64, 0, 23,0.8);
+}
+.RightContainer{
+    height:96%;
+    width:30%;
+    float:left;
+    background-color:rgba(64, 0, 23,0.95);
+}
+.filterContainer{
+    width:100%;
+    height:5%;
+    float:left;
+}
+.DepartmentButton{
+    height: 45%;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+    width: 91%;
+    margin-left: 2%;
+    border: 2px solid rgb(64, 0, 23);
+    background-color: silver;
+    color: white;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px 5px #444;
+    float: left;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    font-size: 20px;
+    transition: all .30s ease-in-out;   
+}
+.DepartmentButton:hover{
+    background-color: #5DADE2;
+}
+.CallComments{
+    width:98%;
+    height:25%;
+    float:left;
+    margin-top:5%;
+}
+.CallTableHeader{
+    width:100%;
+    min-height:15%;
+    height:auto;
+    max-height:30%;
+    padding-top:0.5%;
+    padding-left:1.1%;
+    font-size:120%;
+    border: 2px solid rgb(64, 0, 23);
+    background-color: silver;
+    color: white;
+    text-align: center;
+    float:left;
+    text-shadow: 0.1px 0.1px 0.3px black;
+}
+.CallTableBody{
+     width:100%;
+    height:90%;
+    padding-top:1%;
+    padding-left:1%;
+    border: 2px solid silver;
+    background-color: white;
+    color: grey;
+    text-align: left;
+    float:left;
+    overflow-y:auto;
+}
+.LeftContainer{
+    height:100%;
+    width:70%;
+    float:left;
+    text-shadow:0.5px 0.5px 0.5px grey;
+}
+.dateContainer{
+    height: 5%;
+    width: 96%;
+    margin-top:0.5%;
+    margin-left:1%;
+    border:1px solid rgb(64, 0, 23);
+    background-color:silver;
+    float:left;
+    border-bottom:none;
+
+}
+.dateTimeContainer{
+    width:40%;
+    height:100%;
+    float:left;
+}
+.dateElement{
+    padding-top:1.5%;
+    padding-bottom:2%;
+    width:auto;
+    margin-left:36%;
+    height:10%;
+    float:left;
+    text-align:center;
+    color:white;
+    text-shadow:0.5px 0.5px 1px grey;
+    font-size:140%;
+}
+.calander{
+    height:100%;
+    width:auto;
+    margin-left:2%;
+    max-width:20%;
+    float:left;
+    cursor:pointer;
+}
+.calander:hover{
+    transform:scale(1.1);
+}
+.leftDateArrow{
+    float:left;
+    height:100%;
+    width:auto;
+    max-width:20%;
+    margin-top:-0.2%;
+    transform:rotate(90deg);
+    margin-left:25%;
+    transition: all .25s ease;
+    cursor:pointer;
+}
+.leftDateArrow:hover{
+    
+    background-color:grey;
+    border-radius:50%;
+}
+.rightDateArrow{
+    float:left;
+    height:100%;
+    width:auto;
+    max-width:20%;
+    transform:rotate(-90deg);
+    cursor:pointer;
+    transition: all .25s ease;
+}
+.rightDateArrow:hover {
+   
+    background-color:grey;
+    border-radius:50%;
+}
+.TimesCol{
+    height:86.9%;
+    margin-bottom:2%;
+    border-left:1px solid rgb(64, 0, 23);
+    padding-top:1%;
+    padding-bottom:1%;
+    margin-left:1%;
+    width:6%;
+    float:left;
+    background-color:silver;
+    border-bottom:1px solid rgb(64, 0, 23);
+}
+.SingleTime{
+    padding-top:1.5%;
+    height:3.9%;
+    text-align:center;
+    width:100%;
+    float:left;
+    font-size:120%;
+    color:white;
+    border-bottom:1px solid white;
+}
+.Schedules{
+    height:86.9%;
+    margin-bottom:2%;
+    padding-top:1%;
+    padding-bottom:1%;
+    width:90%;
+    float:left;
+    border-right:1px solid rgb(64, 0, 23);
+    border-bottom:1px solid rgb(64, 0, 23);
+}
+.SingleLine{
+    height:4.05%;
+    text-align:center;
+    width:100%;
+    float:left;
+    border-bottom:1px solid silver;
+}
+.call{
+    position:absolute; 
+    border:3px solid rgba(64, 0, 23,0.8);
+    border-radius:10px;
+    background-color:white;
+    box-shadow: 2px 2px 6px grey;
+    animation: 0.5s CallFromBottom;
+    cursor:pointer;
+    color:rgba(64, 0, 23,0.9);
+    overflow:auto;
+}
+.call:hover{
+    background-color:#dddddd;
+}
+.call2{
+    position:absolute; 
+    color:rgba(64, 0, 23,0.9);
+    border-radius:10px;
+    background-color: white;
+    border: 3px solid rgba(64, 0, 23,0.8);
+    animation: 0.5s CallFromBottom2;
+    overflow:auto;
+}
+.call2:hover{
+    background-color:#dddddd;
+}
+@keyframes CallFromBottom{
+  from {
+   top: 100%;
+  }
+
+  to {
+   top: 30%;
+  }
+}
+@keyframes CallFromBottom2{
+  from {
+   top: 100%;
+  }
+
+  to {
+   top: 60%;
+  }
+}
+.callInfo{
+    width: 95%;
+    margin-left:5%;
+    margin-top:2%;
+    height:50%;
+    
+}
+.CallData{
+    
+    text-align:Left;
+    width:100%;
+    float:left;
+    padding-top:5px;
+    padding-bottom:5px;
+
+}
+.callInfoComment{
+    width: 95%;
+    margin-left:5%;
+    margin-top:0.5%;
+    height:45%;
+    color:rgba(64, 0, 23,0.8);
+    text-align:center; 
+}
+.TopBarDesktop{
+    height:6%; 
+    width:100%;
+    float:left;
+     background-color:rgba(64, 0, 23,0.85);
+}
+.SideMenuDesktop{
+    height:100%; 
+    width: 21%; 
+    background-color:white;
+    float:left;
+    box-shadow:2px 2px 20px black;
+    left: -1000px;
+    position:absolute;
+    transition:left 0.3s ease;
+    border-right:4px solid #a8b2bb;
+    top:0px;
+    z-index:70000000000000000000000000000;
+}
+.menu2Desktop{
+    height:90%; 
+    float:left;
+    width:auto;
+    margin-top:0.2%;
+    margin-left:3%;
+    cursor:pointer;
+}
+.menu2Desktop:hover{
+   height:95%;
+   margin-top:0.1%;
+  
+}
+.MonthYearContainerDesktop{
+    width:20%;
+    height:50%;
+    padding-top:1.4%;
+    float:left;
+    margin-left:65%;
+    color:white;
+    cursor:pointer;
+    transition: all .3s ease;
+}
+.MonthYearContainerDesktop:hover {
+    background-color:white;
+    color:rgba(64, 0, 23,0.85);
+    padding:  0.5% 0.5% 0.5% 0.5%;
+    padding-right:5%;
+    padding-bottom:1%;
+    border-radius:10px;
+    margin-top:0.5%;
+    background-image: url(/img/blackDrop.png);
+    background-repeat: no-repeat;
+    background-position: 92% 50%;
+    background-size: 15px;
+
+}
+.MonthTextDesktop{
+    height:auto;
+    width:auto; 
+    float:left;
+    font-size:150%;
+    
+    font-weight:bold;
+
+}
+.DepartmentContainerDesktop{
+    width:auto;
+    height:auto;
+    margin-top:1.2%;
+    float:left;
+    margin-left:15%;
+    transition: all .3s ease;
+    color:white;
+    cursor:pointer;
+}
+.DepartmentContainerDesktop:hover{
+    background-color:white;
+    color:rgba(64, 0, 23,0.85);
+    padding:  0.5% 0.5% 0.5% 0.5%;
+    padding-right:5%;
+    padding-bottom:1%;
+    border-radius:10px;
+    margin-top:0.5%;
+    background-image: url(/img/blackDrop.png);
+    background-repeat: no-repeat;
+    background-position: 92% 50%;
+    background-size: 15px;
+    
+}
+.YearTextDesktop{
+    height:auto;
+    width:auto; 
+    float:left;
+    font-size:120%;
+    color:white;
+    padding-top:1%;
+    margin-left:5%;
+}
+
+.containerDesktop{
+    width:46%;
+    height:100%;
+    float:left;
+}
+.linksDesktop{
+    width: 80%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    font-size: 200%;
+    color: #a8b2bb;
+    font-weight: bold;
+    float: left;
+    transition: all .3s ease;
+    cursor:pointer;
+}
+.linksDesktop:hover{
+     width: 80%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    font-size: 300%;
+    color: rgba(64, 0, 23,0.8);
+    font-weight: bold;
+    float: left;
+}
+.logoDeskTop {
+    height: auto;
+    width: 70%;
+    max-height: 90%;
+    float: left;
+    margin-left:2%;
+    padding-bottom:1%; 
+}
+.LogoTextDesktop{
+    height: auto;
+    width: 50%;
+    float: left;
+    font-size: 150%;
+    color: rgba(64, 0, 23,0.7);
+    text-align: center;
+    font-weight: bold;
+    margin-top: -8%;
+    margin-left:15%;
+}
+.Error{
+    position:absolute; 
+    height: 100px; 
+    width: 300px; 
+    background-color:white; 
+    box-shadow:2px 2px 4px black; 
+    color: red; 
+    padding-top:3%;
+    padding-bottom:3%;
+    border-radius: 10px; 
+    font-size:120%;
+    text-align:center;
+    animation:CallFromBottom .5s ease; 
+}
+
+.TableContainer{
+    width:100%;
+    height:50%;
+    float:left; 
+    margin-top:9%;
+    overflow-y:auto; 
+    overflow-x:hidden; 
+
+}
+.PhoneDataTable{
+    border-collapse: collapse;
+    float:left;
+       
+
+}
+.headerTB{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+
+}
+.rowMain{
+    text-align: left;
+    padding-left: 1%;
+    box-shadow: 1px 0px 2px #ccc;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    font-weight: normal;
+    padding-top:12px;
+    padding-bottom:12px;
+    font-size:110%;
+}
+.rowHeader{
+    text-align: left;
+    padding-left: 1%;
+    box-shadow: 1px 0px 3px grey;
+    border-bottom: 1px solid rgba(64, 0, 23,0.95);
+    border-top: 1px solid rgba(64, 0, 23,0.95);
+    font-weight: normal;
+    background-color: silver;
+    text-align:center;
+    color: white;
+    font-size:130%;
+    padding-bottom:5px;
+    padding-top:5px;
+}
+.rowed{
+    background-color: #F5F5F5;
+    cursor:pointer;
+    color: rgba(64, 0, 23,0.95);
+    font-weight:bold;
+}
+.rowed:hover{
+    background-color:silver;
+}
+.rowedSmall{
+    cursor:pointer;
+    text-align:center;
+
+    
+}
+.rowedSmall:hover{
+    background-color:grey;
+}
+
+
+.OnCallButtonContainer{
+    width:100%;
+    height:10%;
+    float:left; 
+    margin-top:10%; 
+
+}
+.OnCallButtonLabel{
+
+} 
+.OnCallButtonSelected{
+    width:32%; 
+    height:50%;
+    padding-top:3%;
+    padding-Bottom:2%;
+    box-shadow:2px 2px 6px black;
+    border-radius:10px;
+    margin-left:1%;
+    float:left; 
+    text-align:center;
+    color:white; 
+    background-color:#5DADE2;
+    cursor:pointer; 
+    font-size:120%;
+     transition: all .25s ease;  
+}
+.OnCallButton{
+    width:32%; 
+    height:50%;
+    padding-top:3%;
+    padding-Bottom:2%;
+    box-shadow:2px 2px 6px black;
+    border-radius:10px;
+    margin-left:1%;
+    float:left; 
+    text-align:center;
+    color:white; 
+    background-color:silver;
+    cursor:pointer; 
+    font-size:120%;
+     transition: all .25s ease;  
+}
+.OnCallButton:hover{
+        background-color: #5DADE2;
+}
+.TableContainerLarger{
+    width:95%;
+    height:auto;
+    max-height:60%;
+    float:left; 
+    margin-left:2.5%;
+    margin-top:2%;
+    box-shadow:2px 2px 6px silver;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.HistoryTable{
+    border-collapse: collapse;
+    float: left;
+
+}
+.HistoryHeader{
+    width:100%; 
+    height:8%;
+    float:left;
+    background-color:silver;
+    border:1px solid grey;
+    box-shadow:2px 2px 6px silver;
+}
+.HistoryTopRow{
+    width: 14%; 
+    height:30px;
+    padding-bottom:10px;
+    padding-top:10px;
+    border-left:1px solid grey;
+    float:left;
+    text-align:center; 
+     box-shadow:2px 2px 6px silver;
+     padding-bottom:1%;
+    color:white; 
+    font-size:120%;
+    
+}
+.DateLabel{
+    width:30%;
+    float:left; 
+    margin-left:35%;
+    text-align:center; 
+    margin-right:auto;
+    height:40px;
+    padding-top:20px;
+    background-color:white;
+    font-size: 130%;
+    margin-top:2%;
+    border-radius:20px;
+    color: rgba(64, 0, 23,0.95);
+    box-shadow:2px 2px 4px grey;
+     border:3px solid rgba(64, 0, 23,0.95);
+}
+.HistoryBody{
+    height:90%;
+    width:100%;
+    
+    float:left;
+    overflow-y:auto;
+    overflow-x:hidden;
+    box-shadow:2px 2px 6px silver;
+    background-color:white;
+}
+.SingleRowHistory{
+    width:100%;
+    height:90px;
+    background-color:white;
+   
+
+}
+.DataColumn{
+     width: 10%;
+    height: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-left: 1px solid grey;
+    box-shadow: 1px 0px 2px #ccc;
+    font-weight: normal;
+    padding-top: 12px;
+    text-align:center;
+    padding-bottom: 12px;
+    font-size: 110%;
+    color: rgba(64, 0, 23,0.95);
+}
+.HistoryButtomContainer {
+    width: 70%;
+    height: 6%;
+    float: left;
+    border-radius: 20px;
+    margin-left: 15%;
+    margin-top: 1%;
+    background-color: #a8b2bb;
+}
+.SelectedHistoryButton {
+    cursor: pointer;
+    width: 31.5%;
+    height: 80%;
+    float: left;
+    text-decoration: none;
+    background-color: #a8b2bb;
+    font-size: 120%;
+    margin-left: 1%;
+    margin-top: 0.65%;
+    color: white;
+    background-color: #006699;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px grey;
+}
+.HistoryButton  {
+    width: 32%;
+    height: 80%;
+    float: left;
+    background-color: #a8b2bb;
+    font-size: 120%;
+    margin-left: 1%;
+    margin-top: 0.65%;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.HistoryButton:hover{
+    background-color:grey;
+    border-radius:20px;
+    transform:scale(1.02);
+}
+.textLabel {
+    height: 5%;
+    margin-top: 1.5%;
+    font-size: 110%;
+    color: white;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0.1px 0.1px 1px #a8b2bb;
+}
+.MonthCalander{
+    width:100%;
+    height:94.9%;
+    float:left;
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+    border-top:1px solid silver;
+    background-color:white;
+    transition:height .4s ease;
+}
+.WeekDaysContainer{
+    width:100%;
+    height:5%;
+    float:left;
+}
+.DayName{
+    width:14%;
+    height:45%;
+    float:left;
+    padding-top:1%;
+    color:rgba(64, 0, 23,0.7);
+    font-weight:bold;
+    text-align:center;
+}
+.SingleMonthDay{
+    width: 14.2%;
+    height: 18.52%;
+    box-shadow: 2px 2px 6px black;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    animation: 0.8s fromTop;
+    background-color: white;
+}
+.SingleMonthDaySelected{
+    width:14.2%;
+    height:18%;
+    background-color:white;
+    float:left;
+    box-shadow:3px 3px 6px black;
+     overflow-y:auto;
+    overflow-x:hidden;
+}
+.DayLabelOld{
+    height:2%;
+    width:auto;
+    text-align:center;
+    padding-top:0.5%;
+    font-size:100%;
+    float:left;
+    color:silver;
+}
+.DayLabel{
+    height:auto;
+    width:auto;
+    text-align:center;
+    padding-top:0.5%;
+    font-size:100%;
+    font-weight:bold;
+    float:left;
+    color:black;
+}
+.DayLabelSelected{
+    height:auto;
+    width:auto;
+    text-align:center;
+    padding-top:2px;
+    padding-left:2px;
+    padding-right:5px;
+    padding-bottom:5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px; 
+    font-size:70%;
+    float:left;
+    box-shadow:3px 3px 6px grey;
+    color:white;
+    background-color:blue;
+}
+.ScheduleForDay{
+    width:95%;
+    height:auto;
+    padding-top:5%;
+    padding-bottom:5%;
+    float:left;
+    color:rgba(64, 0, 23,0.8);
+    font-size:75%;
+    margin-top:2%;
+    background-color:white;
+    border:3px solid rgba(64, 0, 23,0.8);
+    text-align:center;
+    border-radius:5px;
+    animation: 1.2s fromTop;
+}
+@keyframes  fromTop{
+  from {
+   margin-top: 100%;
+  }
+
+  to {
+   margin-top: 2%;
+  }
+}
+@keyframes  fromLeft{
+  from {
+   margin-left: 100%;
+  }
+
+  to {
+   margin-left: 0%;
+  }
+}
+.NewEventContainerTitle{
+    width: 100%;
+    height:2%;
+    margin-top:5%;
+    text-align:center;
+    color:rgb(64, 0, 23);
+    text-align:center;
+    font-size:200%;
+    font-weight:bold;
+}
+.NewEventContainer{
+    width: 80%; 
+    height:75%;
+    float:left; 
+    border:2px solid rgba(64, 0, 23,0.95);
+    background-color:rgba(64, 0, 23,0.9);
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px black;
+    margin-top:2%;
+    margin-left:10%;
+
+}
+.Field{
+    float: left;
+    height: 7%;
+    width: 100%;
+    margin-top: 2%;
+    transition: margin-bottom .2s ease;
+}
+.FieldLabel{
+    float: left;
+    height: 50%;
+    padding-top: 2%;
+    width: 15%;
+    text-align:center;
+    font-size: 22px;
+    color: white;
+}
+.FieldDataSmall{
+    outline: none;
+    border: 1px solid silver;
+    float: left;
+    width: 30%;
+    cursor:pointer;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+    height: 85%;
+    border-radius: 8px;
+    box-shadow:2px 2px 6px black;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    font-size: 18px;
+    background-color:white;
+    background-image: url(/img/blackDrop.png);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 15px;
+}
+.FieldData{
+    outline: none;
+    border: 1px solid silver;
+    float: left;
+    width: 53%;
+    cursor:pointer;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+    height: 85%;
+    border-radius: 8px;
+    box-shadow:2px 2px 6px black;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    font-size: 18px;
+    background-color:white;
+    background-image: url(/img/blackDrop.png);
+    background-repeat: no-repeat;
+    background-position: 94% center;
+    background-size: 15px;
+}
+.FieldDataCal{
+    outline: none;
+    border: 1px solid silver;
+    float: left;
+    width: 30%;
+    cursor:pointer;
+    margin-left: 3%;
+    margin-top: 2%;
+    color:black;
+    margin-bottom: 1.5%;
+    height: 85%;
+    border-radius: 8px;
+    box-shadow:2px 2px 6px black;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    font-size: 20px;
+    background-color:white;
+    background-image: url(/img/cal.png);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 30px;
+}
+.FieldTimes{
+    outline: none;
+    border: 1px solid silver;
+    float: left;
+    width: 25%;
+    cursor:pointer;
+    margin-left: 3%;
+    margin-top: 2%;
+    color:black;
+    margin-bottom: 1.5%;
+    height: 85%;
+    border-radius: 8px;
+    box-shadow:2px 2px 6px black;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    font-size: 20px;
+    background-color:white;
+    background-image: url(/img/blackDrop.png);
+    background-repeat: no-repeat;
+    background-position: 87% center;
+    background-size: 15px;
+}
+.addimg{
+    height: auto; 
+    width:auto; 
+    max-height:100%;
+    max-width:100%;
+    display:block;
+   
+    margin-right:auto;
+    margin-left:auto;
+     margin-top:auto;
+    margin-bottom:auto;
+    cursor:pointer;
+    transition: all .2s ease;
+}
+.addimg:hover{
+    transform:scale(1.05);
+     border-radius:10px;
+    background-color:silver;
+}
+.addDiv{
+    float:left;
+    width: 3%;
+    height: 100%;
+    border-radius:10px;
+    margin-top:2.1%;
+    
+}
+.RepeaterContainer{
+    height: 80px;
+    width:100%;
+    float:left;
+
+}
+.DailyRepeaLabel{
+    width: auto; 
+    height:20px;
+    float:left;
+    font-size: 22px;
+    color: white;
+    padding-top:0.3%;
+}
+.repeatInput{
+    outline: none;
+    border: 1px solid silver;
+    float: left;
+    width: 10%;
+    cursor:pointer;
+    margin-left: 3%;
+    margin-right:2%;
+    margin-bottom: 1.5%;
+    height: 55%;
+    border-radius: 8px;
+    box-shadow:2px 2px 6px black;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    font-size: 18px;
+    background-color:white;
+    background-image: url(/img/blackDrop.png);
+    background-repeat: no-repeat;
+    background-position: 94% center;
+    background-size: 15px;
+}
+.SmallCallInput{
+    outline: none;
+    border: 1px solid silver;
+    float: left;
+    width: 20%;
+    cursor:pointer;
+    margin-left: 3%;
+    color:black;
+    margin-bottom: 1.5%;
+    height: 55%;
+    border-radius: 8px;
+    box-shadow:2px 2px 6px black;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    font-size: 20px;
+    background-color:white;
+    background-image: url(/img/cal.png);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 30px;
+}
+.CommentsContainer{
+    width: 100%;
+    height:15%;
+    float:left; 
+    margin-top:5%;
+
+}
+.CommentPublicContainer{
+    width:44%; 
+    height:100%;
+    margin-left:6%;
+    float:left;
+}
+.Comments{
+    outline: none;
+    border: 1px solid silver;
+    float: left;
+    width: 52%;
+    cursor:pointer;
+    margin-left: 16%;
+    color:black;
+    margin-bottom: 1.5%;
+    height: 75%;
+    border-radius: 8px;
+    box-shadow:2px 2px 6px black;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    font-size: 20px;
+    background-color:white;
+
+}
+
+.OnCallButtonLarge {
+    float: left;
+    height: 4%;
+    width: 25%;
+    box-shadow:2px 2px 6px black;
+    color: white;
+    font-size: 120%;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 3%;
+    padding-top: 1%;
+    border-radius: 10px;
+    background-color: rgb(64, 0, 23);
+    cursor: pointer;
+    text-decoration: none;
+    padding-bottom: 1%;
+    transition: all .25s ease-in-out;
+    text-shadow: black 0.1px 0.1px 1px;
+}
+.OnCallButtonLarge:hover{
+     background-color: silver;
+     color: rgba(64, 0, 23,0.8);
+}
+.iconEditOnCall{
+    width: auto;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: %;
+    padding: 2px 2px 2px 2px;
+    border: 2px solid rgb(64, 0, 23);
+    border-radius: 50%;
+    background-color: rgba(64, 0, 23,0.6);
+    cursor:pointer;
+    transition:all .2s ease;
+}
+.iconEditOnCall:hover{
+    transform:scale(1.1);
+    background-color:rgba(64, 0, 23,0.85);
+    box-shadow: 2px 2px 6px black;
+}
+
+.SideMenu{
+    height:1000px; 
+    width: 25%; 
+    background-color:white;
+    float:left;
+    box-shadow:2px 2px 20px black;
+    left: -1000px;
+    position:absolute;
+    transition:left 0.3s ease;
+    border-right:4px solid #a8b2bb;
+    top:0px;
+    z-index:70000000000000000000000000000;
+}
+
+.SideLinks{
+    height: 5%;
+    width:92%;
+    padding-top:3.9%;
+    padding-bottom:2%;
+    float:left;
+    margin-top:1.5%;
+    margin-left:1%;
+    border:3px solid #5c0a3a;
+    border-left:4px solid #5c0a3a;
+    text-align:left;
+    box-shadow:2px 2px 4px grey;
+    padding-left:3%;
+    color: white;
+    font-size:150%;
+    font-weight:bold;
+    background-color:#5c0a3a;
+    text-decoration:none;
+    transition: all .25s ease-out; 
+}
+.SideLinks:hover{
+   background-color:silver;
+   color:#5c0a3a;
+}
+.barTop{
+    height:6%;
+    width:100%;
+    float:left;
+    margin-top:-1%;
+    background-color:#a8b2bb;
+    text-shadow:0.5px 0.5px 2px grey;
+    box-shadow:2px 2px 4px grey;
+}
+.menu{
+    height:90%; 
+    float:left;
+    width:2%;
+    margin-top:0.2%;
+    margin-left:3%;
+    cursor:pointer;
+}
+.menu:hover{
+    transform:scale(1.05);
+}
+.menu2{
+    height:90%; 
+    float:left;
+    width:3%;
+    margin-top:0.2%;
+    margin-left:3%;
+    cursor:pointer;
+}
+.menu2:hover{
+   height:95%;
+  
+   margin-top:0.1%;
+  
+}
+.bottomIcon{
+    width:80%;
+    margin-top:70%;
+    margin-left:5%;
+    height:auto;
+    float:left;
+}
+.TitleAdmin{
+    width:100%;
+    height:auto;
+    padding-top:40px;
+    padding-bottom:10px;
+    font-size:35px;
+    color:rgba(64, 0, 23,0.95);
+    text-align:center;
+    float:left;
+}
+.ContentCloumn1{
+    width:39%;
+    height:63%;
+    float:left;
+    margin-top:2%;
+    margin-left:2%;
+    border-radius:20px;
+    background-color:#a8b2bb;
+    padding-top:1%;
+    box-shadow:2px 2px 6px grey;
+    border:2px solid silver;
+    padding-bottom:4%;
+}
+.CloumnTitle{
+    width:100%;
+    height:5%;
+    float:left;
+    text-align:center;
+    text-shadow:0.1px 0.1px 2px black;
+    font-size:140%;
+    color:white;
+    padding-bottom:1%;
+}
+.UsersinRoles{
+    width:90%;
+    margin-left:5%;
+    height:100%;
+    float:left;
+    background-color:white;
+    overflow:auto;
+    border-radius:10px;
+    border:2px solid silver;
+    box-shadow:2px 2px 5px grey;
+}
+
+.SingleUserInRoleHeader{
+    width:100%;
+    height:auto;
+    padding-bottom:1%;
+    float:left;
+    background-color:grey;
+}
+.SingleFieldsHeader{
+    width:25%;
+    height:40%;
+    padding-top:1%;
+    float:left;
+    text-align:center;
+    font-size:100%;
+    color:white;
+}
+.SingleUserInRole{
+    width:100%;
+    height:auto;
+    min-height:5%;
+    padding-top:1%;
+    padding-bottom:2%;
+    float:left;
+    color:grey;
+    cursor:pointer;
+    border-bottom:1px solid silver;
+}
+.SingleUserInRoleSelected{
+    width:100%;
+    height:auto;
+    min-height:5%;
+    padding-top:1%;
+    padding-bottom:2%;
+    float:left;
+    color:grey;
+    cursor:pointer;
+    border-bottom:1px solid silver;
+    background-color:blue;
+}
+.SingleUserInRole:hover{
+    background-color:blue;
+    color:white;
+}
+.SingleFields{
+    width:25%;
+    height:40%;
+    padding-top:1%;
+    float:left;
+    text-align:center;
+    text-shadow:0.1px 0.1px 1px black;
+    font-size:90%;
+}
+.ArrowContainerSmall{
+    width:40%;
+    height:50px;
+    float:left;
+    margin-left:30%;
+    margin-right:30%;
+    background-color:#a8b2bb;
+    box-shadow:2px 2px 6px grey;
+    margin-top:30%;
+    border-radius:10px;
+    cursor:pointer;
+    transition:all .2s ease;
+}
+.ArrowContainerSmallWrong{
+    width:40%;
+    height:50px;
+    float:left;
+    margin-left:30%;
+    margin-right:30%;
+    background-color:#a8b2bb;
+    box-shadow:2px 2px 6px grey;
+    margin-top:30%;
+    border-radius:10px;
+    cursor:pointer;
+    transition:all .2s ease;
+}
+.ArrowContainerSmall:hover{
+    background-color:blue;
+    border-radius:20px;
+}
+.Arrows{
+    width:50%;
+    height:auto;
+    max-height:100%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.ArrowContainer {
+    width: 15%;
+    height: 80%;
+    float: left;
+}
+.rotate{
+    transform:rotate(180deg);
+}

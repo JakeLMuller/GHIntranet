@@ -1,0 +1,2439 @@
+.text{
+  width: 60%;
+  float: left;
+  margin: 10px;
+  padding: 2px;
+  height: 30px;
+  padding-left: 5px;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color: grey;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color:white;
+  background-image: url("/img/index.png");
+  background-repeat: no-repeat;
+  background-position: 94% center;
+  background-size: 15px;
+  outline: none;
+  border: 1px solid silver;
+}
+.NavItem{
+  width: 14%;
+  float: left;
+  height: 50%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color:rgb(64,0,53);
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-weight:bold;
+  font-size: 18px;
+  text-align: center;
+  background-color: white;
+  background-image: url("/img/blackDrop.png");
+  background-repeat: no-repeat;
+  background-position: 85% 50%;
+ 
+  background-size: 10px;
+  cursor: pointer;
+
+}
+
+.Clearbutton{
+  width: 45px;
+  float: left;
+  border-radius: 5px;
+  overflow-x: auto;
+  background-color: silver;
+  color: white;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  font-size: 16px;
+}
+.Clearbutton:hover{
+  color: blue;
+}
+.sideContainer{
+  margin-right: auto;
+  height: auto;
+  width: auto;
+}
+
+.SingleSideContainer{
+  width: 200px;
+  margin: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  background-color: silver;
+
+}
+.text::placeholder{
+  width: 200px;
+  float: left;
+
+  padding: 2px;
+  opacity: 0.3;
+  padding-left: 30px;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color: grey;
+  text-align: left;
+  font-size: 18px;
+}
+.hide {
+  display: none;
+}
+.DropOption{
+  text-align: left;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color: grey;
+  height: 20px;
+  padding-left:5%;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 5px;
+  cursor:pointer;
+}
+.DropOption:hover{
+  text-align: left;
+   padding-left:5%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color: white;
+  background-color: #6f2534;
+  height: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+.footerNav{
+    
+    text-align: center;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+   color: rgb(64, 0, 23);
+    height: 15%;
+    float: left;
+    width: 25%;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.footerNav:hover{
+    color: white;
+  background-color: rgb(64, 0, 23);
+}
+.DropDown{
+   
+    max-height:300px;
+    border:1px solid rgb(64, 0, 23);
+    border-top:none;
+}
+.dropContainer{
+    height:100%;
+    width:100%;
+    float:left;
+    box-shadow:2px 2px 6px grey;
+    background-color: rgba(64, 0, 23,0.9);
+}
+.singleColoum{
+    float:left;
+    width:30%;
+    height:96.5%;
+    margin-top:0.5%;
+}
+.DropNav{
+  text-align: left justify;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    color: white;
+    height: 10%;
+    float: left;
+    /* clear: both; */
+    margin-left: 30%;
+    margin-right: 10%;
+    width: auto;
+    
+    /* max-width: 40%; */
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.DropNav:hover{
+  color:rgb(64, 0, 23);
+  background-color: rgb(248,249,250);
+  
+}
+.canvas{
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color:rgba(64, 0, 23,0.06);
+}
+
+.header{
+    height: 12%;
+    width: 100%;
+    position:fixed;
+    background-color:rgb(248,249,250);
+    z-index:7000000000000000000000000;
+}
+
+.headerPartOne{
+    background-color:white; 
+    height: 40%;
+    width: 100%;
+    float: left;
+    border-top: 1px solid rgba(64, 0, 23,0.4);
+    border-bottom: 1px solid rgba(64, 0, 23,0.4);
+    box-shadow: 1px 1px 10px grey;
+
+}
+
+.headerPartOneTwo{
+  height: 60%;
+  width: 100%;
+  float: left;
+
+}
+.SearchBox{
+  float: left;
+  height: 100%;
+  width: 35%;
+}
+.Filler{
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.SearchBoxImg{
+  height: auto;
+  width: auto;
+  float: left;
+  height: auto;
+  margin-left: auto;
+  max-width: 80%;
+  max-height: 70%;
+  margin-top: 2%;
+}
+.SearchBoxImg:hover{
+    cursor:pointer;
+}
+.SearchBoxView{
+  float: left;
+  width: 50%;
+  height: 50%;
+}
+.SearchBoxViewWeather{
+  float: left;
+  width: 100%;
+  height: 40%;
+}
+}
+.headerImg{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  float: left;
+  cursor:pointer;
+}
+.headerImg1{
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 75%;
+  margin-top:0.5%;
+  float: left;
+  cursor:pointer;
+}
+.headerImg1:hover{
+    background-color:silver;
+}
+.WeatherContainer{
+  float: left;
+  height:65%;
+  width: 100%;
+  box-shadow: 2px 2px 8px silver;
+  background: white;
+  transition: height 0.3s ease-out 0s;
+  border-radius: 10px;
+ 
+}
+.WeatherContainerHeader{
+  float: left;
+  height:18%;
+  width: 100%;
+  
+  border-top-left-radius: 8px;
+  border-top-right-radius:8px;
+  background-color:  rgba(64, 0, 23,0.8);
+  border:1px solid rgb(64,0,23);
+
+}
+.WeatherContainerHeaderLable{
+  float: left;
+  width: 35%;
+  height: 100%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  padding-top: 1%;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+.WeatherContainerHeaderFiller{
+  float: left;
+  width: 4%;
+  height: 100%;
+}
+.WeatherContainerSearchBox{
+  float: left;
+  width: 47%;
+  height: 100%;
+
+}
+.WeatherContainerBody{
+  float: left;
+  height:82%;
+  width: 100%;
+  
+
+}
+.TableWeather{
+  height: 100%;
+  width: 100%;
+
+
+}
+.SingleWeatherSmall{
+  float: left;
+  height: auto;
+  width: 24.502%;
+  height: 99.8%;
+  border: 1px solid silver;
+}
+.TableWeatherHeader{
+  height: 12%;
+  width: 100%;
+ 
+  border-bottom: 1px solid silver;
+
+}
+.TableWeatherName{
+ color: rgb(64, 0, 23);
+  text-align: center;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  font-size: 12px;
+  font-weight: bold;
+  margin: auto;
+  padding-top: 1%;
+}
+.TableWeatherTemp{
+  float: left;
+  width: 100%;
+  height: 15%;
+ color: rgb(64, 0, 23);
+  text-align: center;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  padding-top: 3px;
+  font-size: 14px;
+  font-weight: bold;
+
+}
+.TableWeatherIcon{
+  padding-top: 2px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  box-shadow: 2px 2px 3px silver;
+  border-radius: 5px;
+  width: auto;
+  height: 40%;
+  margin-left: 27%;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+.TableWeatherForcast{
+  float: left;
+  height:32%;
+  width: 100%;
+ color: rgb(64, 0, 23);
+  margin: auto;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  text-align: center;
+  font-size: 10px;
+
+}
+.TableWeather{
+
+}
+.SingleWeatherHourly{
+  float: left;
+  height: auto;
+  border-bottom: 1px solid silver;
+  min-height: 120px;
+  margin-top: 5px;
+  background-color: rgb(235, 216, 216);
+  margin-left: 1.5%;
+  border: 2px solid #6f2534;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px silver;
+}
+.SingleWeather{
+      float: left;
+    /* height: auto; */
+    border-bottom: 1px solid silver;
+    min-height: 100px;
+    margin-top: 5px;
+    background-color: rgba(64, 0, 23,0.2);
+    width: 98%;
+    margin-left: 1%;
+    border: 2px solid #6f2534;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px silver;
+}
+.SingleWeatherHeader{
+  height: 15%;
+  display: block;
+
+  width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius:7px;
+  box-shadow: 2px 0.5px 3px silver;
+    background-color:  rgba(64, 0, 23,0.7);
+  border:1px solid rgb(64,0,23);
+
+
+}
+.SingleWeatherName{
+  width: 100%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+.SingleWeatherIcon{
+  float: left;
+  height: auto;
+  box-shadow: 2px 2px 3px silver;
+  border-radius: 2px;
+  width: auto;
+  margin: 1.5%;
+  max-width: 110%;
+  max-height: 110%;
+}
+.SingleWeatherTable{
+  float: left;
+  width: 75%;
+  height: 40%;
+}
+.tableRow{
+  width: 100%;
+  height: 23%;
+  max-height: 23%;
+  max-width: 100%;
+}
+.SingleWeatherTemp{
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  text-align: left;
+ color: rgb(64, 0, 23);
+  font-size: 18px;
+    font-weight:bold;
+}
+.SingleWeatherWind{
+  max-width: 45%;
+  padding-top:6%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  text-align: left;
+ color: rgb(64, 0, 23);
+  font-size: 14px;
+  width: 40%;
+  font-weight:bold;
+
+}
+.SingleWeatherForcast{
+  
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+ color: rgb(64, 0, 23);
+  margin: auto;
+  width: auto;
+  text-align: left;
+  font-size: 15px;
+  padding-top: 18%;
+  height: auto;
+}
+.SumbitButtom{
+  width: 40px;
+  float: left;
+  border-radius: 5px;
+  overflow-x: auto;
+  background-color: silver;
+  color: white;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  font-size: 16px;
+  box-shadow: 0.5px 0.5px 2px silver;
+  position: relative;
+  margin-left: 42px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 3px;
+  margin-top: 4px;
+}
+.SumbitButtom:hover{
+  width: 40px;
+  float: left;
+  border-radius: 5px;
+  overflow-x: auto;
+  background-color: silver;
+  color: blue;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  font-size: 16px;
+  box-shadow: 0.5px 0.5px 2px silver;
+  position: relative;
+  margin-left: 42px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 3px;
+  margin-top: 4px;
+}
+.hide {
+  display: none;
+}
+.MainContent{
+  float: left;
+  height: 86%;
+  width: 100%;
+}
+
+.CardContainer{
+  float: left;
+  height: 70%;
+  width: 70%;
+  margin-left: 2%;
+}
+.SideContainer{
+  float: left;
+  height: 60%;
+  width: 28%;
+  margin-left: -4%;
+}
+.TopSideContainer{
+  float: left;
+  height: 50%;
+}
+.BottomContainer{
+  float: left;
+  margin-top:-15%;
+  height: 50%;
+}
+.SingleCard{
+    float: left;
+    height: 38%;
+    width: 16%;
+    border-radius: 3px;
+    margin: 4px;
+    box-shadow: 2px 2px 6px silver;
+    background-color: white;
+    overflow-y: auto;
+    border: 1px solid rgba(64, 0, 23,0.2);
+    transition: all .25s ease-in-out;
+}
+.SingleCard:hover{
+  transform: scale(1.08);
+  background-color:whitesmoke;
+  box-shadow: 2px 2px 8px #6f2534;
+ 
+}
+.cardTitle{
+    height:6%;
+    width:100%;
+    float:left;
+    color:black;
+    text-shadow:0.5px 0.5px 1px grey;
+    padding-top:4%;
+    text-align:center;
+    font-weight:bold;
+    font-size:130%;
+    text-decoration:underline;
+    padding-bottom:2%;
+}
+.CardImage{
+  float: left;
+  width: 100%;
+  height: auto;
+  max-height:70%;
+}
+.CardLink{
+
+  height: auto;
+  float: left;
+  width: 100%;
+ 
+}
+.LinkWithImage{
+    width:90%;
+    margin-left:5%; 
+    height:auto;
+    float:left;
+}
+.LinkImage{
+    height:25px;
+    width:25px; 
+    float:left;
+}
+.CImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 10px;
+
+}
+.CLink{
+  text-align: center;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color: rgba(64, 0, 23,0.75);
+  height: auto;
+  float: left;
+  text-decoration: none;
+  width: 90%;
+  margin-left:5%;
+  font-size: 13px;
+  margin-top: 7px;
+}
+.CLink:hover{
+  color: #00008;
+  text-decoration: underline;
+}
+.CArrow{
+  margin-left: 2px;
+  margin-top: 2px;
+}
+.newsContainer{
+  float: left;
+  height: 30%;
+  width: 98%;
+  margin-left: 0.5%;
+  margin-top: 0.5%;
+  margin-bottom:2.5;
+}
+.newsContainerHeader{
+    float: left;
+    height: 15%;
+    width: 40%;
+    margin-left:30%;
+    margin-right:30%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom:5px;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    color:rgb(64, 0, 23);
+    
+    
+    font-size: 20px;
+    border-radius:5px;
+    font-weight:bold;
+    text-align: center;
+  
+    
+    margin-top: 2px;
+  
+   background-image:url("/img/news.png");
+    background-repeat: no-repeat;
+    background-position: 37% 55%;
+    background-size: 60px;
+   
+}
+
+.singleNewsContainer{
+    float: left;
+    height: 78%;
+    width: 16%;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px silver;
+    background-color: white;
+    overflow-y: auto;
+    border: 1px solid rgba(64, 0, 23,0.2);
+    transition: left 0.3s ease-out;
+}
+.singleNewsContainer:hover{
+  background-color:aliceblue;
+  box-shadow: 2px 2px 8px #6f2534;
+}
+.subMainCon{
+    float:left;
+    height:90%;
+    width:100%;
+    margin-top:10%;
+    background-color:white;
+}
+.TopNewContainer{
+  float: left;
+  height: 35%;
+  width: 100%;
+}
+.bottomNewContainer{
+  float: left;
+  height: 65%;
+  width: 100%;
+}
+.halfText{
+  float: left;
+  height: 20%;
+  width: 45%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color: white;
+  font-size: 17px;
+}
+.titleContainer{
+    width: 85%;
+    height:10%;
+    float:left;
+}
+.fullText{
+    float: left;
+    height: auto;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    color: rgba(64, 0, 23,0.65);
+    text-shadow:0.1px 0.1px 1px silver;
+    font-size: 10px;
+    word-wrap: break-word;
+
+}
+.Image{
+  padding-top: 2px;
+  padding-bottom: 3px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+  padding-top: 10px;
+  max-height: 55%;
+}
+.canvas2{
+  position:Fixed;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  left:0px;
+  z-index: 9000000000000000000;
+  width:100%;
+  height:100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: rgba(0, 0, 0, 0.85) none repeat scroll 0% 0%;
+ 
+
+}
+.IFrame{
+  position:absolute;
+  top:10%;
+  bottom:10%;
+  right:20%;
+  left:20%;
+  width: 60%;
+  height: 80%;
+  z-index: 2001;
+  animation: 0.7s fromBottom;
+   text-align:center; 
+   background-color:white;
+}
+.IFrameNoColor{
+  position:absolute;
+  top:10%;
+  bottom:10%;
+  right:20%;
+  left:20%;
+  width: 60%;
+  height: 80%;
+  z-index: 2001;
+  animation: 0.7s fromBottom;
+   text-align:center; 
+}
+.IFrame2{
+  position:absolute;
+  top:10%;
+  bottom:10%;
+  right:20%;
+  left:20%;
+  background-color:white;
+  width: 60%;
+  height: 80%;
+  z-index: 2001;
+ 
+   text-align:center
+}
+.RightArrow{
+    position:absolute;
+    top:40%;
+    right:0%;
+    width:100px;
+    transform:rotate(-90deg);
+}
+.RightArrow:hover{
+    width:120px;
+    right:-0.5%;
+    top:39%;
+}
+.LeftArrow{
+    position:absolute;
+    top:40%;
+    left:0%;
+    width:100px;
+    transform:rotate(90deg);
+}
+.LeftArrow:hover{
+    width:120px;
+    left:-0.5%;
+    top:39%;
+}
+.loding{
+  position:absolute;
+  top:10%;
+  bottom:10%;
+  right:20%;
+  left:20%;
+  width: 60%;
+  height: 80%;
+  z-index: 2002;
+  animation: 0.7s fromBottom;
+}
+.lodingImg{
+  float: left;
+  height: 20%;
+  width: 20%;
+  margin-top: 20%;
+  margin-left: 40%;
+  background-color: #E5ECF9;
+  border-radius: 5px;
+
+}
+
+@keyframes  fromBottom{
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 10%;
+  }
+}
+.EventWidget{
+  float: left;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1%;
+}
+.EventHeader{
+  float: left;
+  height: 10%;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-align: center;
+  box-shadow: 4px 2px 8px silver;
+  border:2px solid rgb(64, 0, 23);
+  background-color:  rgba(64, 0, 23,0.8);
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color: white;
+  font-size: 20px;
+}
+.EventBody{
+  float: left;
+  height: 84%;
+  border: 2px solid silver;
+  border-top: none;
+  width: 99.5%;
+  box-shadow: 4px 2px 8px silver;
+  background: white;
+  overflow: auto;
+}
+.AllEventsContainer{
+  float: left;
+  height: 74%;
+  width: 100%;
+}
+.singleEvent2{
+  float: left;
+  min-height: 20%;
+  height:auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 100%;
+}
+.singleEvent{
+  float: left;
+  height: 20%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 100%;
+}
+.singleEventHeader{
+  float: left;
+  height: 25%;
+  width: 96%;
+  margin-left: 2%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color:  rgb(64, 0, 23);
+  font-size: 16px;
+  font-weight:bold;
+}
+.singleEventBody{
+    float: left;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    cursor: pointer;
+    min-height: 55%;
+
+    width: 90%;
+    margin-left: 5%;
+    background-color:white;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+   color: rgb(64, 0, 23);
+    text-align: center;
+    font-size: 15px;
+}
+.CalanderButton{
+  float: left;
+  margin-top: 20px;
+  height: 20px;
+  width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color: white;
+  border:2px solid  rgb(64, 0, 23); 
+  background-color:  rgba(64, 0, 23,0.8);
+  text-align: center;
+  font-size: 15px;
+  font-weight:bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.sideSlide{
+  float: left;
+  width: 0%;
+  transition: width 0.3s ease-out 0s;
+  height: 80px;
+  margin-top:8px;
+  background-color:white;
+}
+.Singlelinks{
+  float: left;
+  height: 20%;
+  width: 100%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+ color: rgb(64, 0, 23);
+  text-align: center;
+  font-size: 15px;
+}
+.Singlelinks:hover{
+    color: white;
+    background-color: #6f2534;
+}
+.FilesWidget{
+  float: left;
+  height: auto;
+  min-height: 15%;
+  width: 60%;
+  border-radius: 10px;
+  border:1px solid #dddddd;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  background-color:white;
+  margin-left:20%;
+}
+.FilesHeader{
+  float: left;
+  height: 20%;
+  width: 98%;
+  padding-top: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  padding-bottom: 5px;
+  background-color:#f5f5f5;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+  color:  grey;
+  border-bottom:1px solid #dddddd;
+  font-size: 20px;
+  text-align: left;
+  font-size: 20px;
+  padding-left:2%;
+}
+.FilesBody{
+  float: left;
+  height: 80%;
+  border-top: none;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  background-color:white;
+
+}
+.SingleFilelinks{
+  float: left;
+  height: auto;
+  width: 95%;
+  padding-top: .8%;
+  padding-bottom: .8%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+ color: rgb(0, 102, 153);
+  text-align: left;
+  font-size: 18px;
+  padding-left:5%;
+}
+.SingleFilelinks:hover{
+  background-color:#dddddd;
+}
+.folderHolder{
+  float: left;
+  height: auto;
+  width: 95%;
+  padding-top: .8%;
+  padding-bottom: .8%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    color: rgb(0, 102, 153);
+  text-align: left;
+  font-size: 18px;
+  padding-left:5%;
+  cursor:pointer;
+  text-decoration:underline;
+}
+.SingleDivFilelinks{
+     float: left;
+  height: auto;
+  width: 95%;
+  padding-top: .8%;
+  padding-bottom: .8%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+ color: rgb(0, 102, 153);
+  text-align: left;
+  font-size: 18px;
+  padding-left:5%;
+  cursor:pointer;
+  text-decoration:underline;
+}
+.SingleDivFilelinks:hover{
+  background-color:#dddddd;
+}
+.ToNewLink{
+    position:absolute; 
+    right:50px;
+    bottom:40px;
+    height:100px;
+    width: 100px;
+    border-radius:50%;
+    z-index:2000000;
+    cursor:pointer;
+ 
+}
+.ToNewLinkIMG{
+    position:relative; 
+    height:100px;
+    width: 100px;
+    border-radius:50%;
+    z-index:2000000;
+    cursor:pointer;
+}
+.BreadCrumbs{
+    float: left;
+    height: 40px;
+    
+    width: 60%;
+    border-radius: 10px;
+    border:1px solid #dddddd;
+    margin-top: 1%;
+    background-color:white;
+    margin-left:20%;
+}
+.Files{
+    float:left;
+    height:auto;
+    width:100%;
+}
+.SinglelinksSmall{
+  float: left;
+  height: auto;
+  width: auto;
+  padding-top: .8%;
+  padding-bottom: .8%;
+  font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+ color: rgb(0, 102, 153);
+  text-align: left;
+  font-size: 18px;
+  text-decoration:none;
+  padding-left:1%;
+}
+.SinglelinksSmall:hover{
+  background-color:#dddddd;
+}
+.Titlel{
+    float: left;
+    height: 40px;
+    width: 85%;
+    margin-left:7.5%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+   color: rgb(64, 0, 23);
+  
+    font-size: 30px;
+    text-decoration:none;
+    border-bottom: 1px solid Silver;
+}
+.Title2{
+    float: left;
+    height: 30px;
+    width: 30%;
+    margin-left:35%;
+    text-align: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    color: rgb(0, 102, 153);
+    border-radius:10px;
+    box-shadow: 2px 2px 6px grey;
+    background-color:#f5f5f5;
+    font-weight:bold;
+    font-size: 28px;
+    text-decoration:none;
+    
+}
+.SubHeader{
+    float: left;
+    height: 40px;
+    width: 85%;
+    margin-left:7.5%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    color: Grey;
+  
+    font-size: 22px;
+    text-decoration:none;
+   
+
+}
+.ImageContainer{
+    float: left;
+    height: 100px;
+    width: 85%;
+    margin-left: 7.5%;
+    margin-bottom: 1%;
+}
+.SingleImageContainer{
+    display: block;
+      margin-left: 14%;
+      margin-right: auto;
+      max-width: 55%;
+      margin-top: 10px;
+      float:left;
+}
+.FaxHeader{
+    width: 30%; 
+    height:2%;
+    float:left; 
+    margin-left: 35%;
+    border-bottom: 1px solid #6f2534;
+    color:#601625;
+    padding-bottom:1.5%;
+    padding-top:.1%;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    font-size: 30px;
+    text-align:center;
+}
+.FaxMidDrift{
+    width: 90%;
+    margin-left:5%; 
+    padding-top:1%;
+    height:50px;
+    float:left; 
+    
+}
+.SearchAndPage{
+    width: 89.67%;
+    margin-left:5%; 
+    margin-top:-5px;
+    float:left;
+    height:25%;
+    
+    border-left:3px solid rgba(64, 0, 23,0.9);
+    border-right:3px solid rgba(64, 0, 23,0.9);
+}
+.SearchAndPageLabal{
+    float: left;
+    text-align:right;
+    height: 2%;
+    color:#6f2534;
+    padding-top:0.5%;
+    padding-bottom:2.5%;
+    font-size:22px;
+    width: 60%;
+}
+.SubSearchLabel{
+    float:left;
+    height:5%;
+    width:10%;
+    color:#6f2534;
+    text-align:center;
+    padding-top:0.9%;
+    padding-bottom:1.5%;
+    font-size:22px;
+  
+}
+.FaxTable{
+    width: 89.68%;
+    margin-left:5%;
+     
+    height:62%;
+    float:left; 
+    box-shadow: 2px 2px 6px silver;
+    overflow-y:auto;
+    border-bottom:3px solid rgba(64, 0, 23,0.9);
+    overflow-x:hidden;
+    border-left:3px solid rgba(64, 0, 23,0.9);
+    border-right:3px solid rgba(64, 0, 23,0.9);
+}
+
+.FaxTableHeaderTabs{
+    float: left;
+    height: 80%;
+    width: 100%;
+    
+    }
+.SingleTab{
+    float: left;
+    width: 20%;
+    color:white;
+    background-color:silver;
+    padding-left: 2%;
+    font-size: 100%;
+    margin-left: 4px;
+    border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 4px silver;
+    text-decoration:none;
+    
+}
+.SingleTabSel{
+    float: left;
+    width: 20%;
+    color:white;
+   
+      border:1px solid #6f2534;
+    border-bottom:none;
+    background-color:  rgba(64, 0, 23,0.95);
+    padding-left: 2%;
+    font-size: 100%;
+    margin-left: 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 10px #444;
+    text-decoration:none;
+    
+}
+.SingleTab:hover{
+   background-color:rgba(64, 0, 23,0.9);
+   
+   color:white;
+}
+.FaxTableHeaderBottomBar{
+    float: left;
+    height: 10%;
+    width: 100%;
+    background-color:rgba(64, 0, 23,0.9);
+    
+}
+.FaxTableHeader2{
+    float: left;
+    height: 10%;
+    width: 98.99%;
+    margin-top: 10px;
+   
+    padding-bottom: 5px;
+    
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+    color:  white;
+    border-bottom:1px solid #dddddd;
+   
+    font-size: 20px;
+
+    font-size: 20px;
+  
+}
+.SingleTableElem{
+    float: left;
+    height: 4%;
+    width: 100%;
+    border-bottom:1px solid #dddddd;
+    padding-top:10px;
+    padding-bottom:10px;
+    cursor:pointer;
+    background: white;
+}
+.SingleTableElem:hover {
+    background-color:#5DADE2;
+    }
+.SingleTableElemBlue{
+    float: left;
+    height: 4%;
+    width: 100%;
+    border-bottom:1px solid #dddddd;
+    padding-top:10px;
+    cursor:pointer;
+    padding-bottom:10px;
+     
+}
+.SingleTableElemBlue:hover {
+    background-color:#5DADE2;
+    }
+.SingleTableElem2{
+    float: left;
+    height: 4%;
+    width: 100%;
+    cursor:pointer;
+    border-bottom:1px solid #dddddd;
+    padding-top:10px;
+    padding-bottom:10px;
+    
+}
+.darkBlueST{
+    background-color: rgba(0, 102, 153, 0.8);
+    float: left;
+    height: 4%;
+    width: 100%;
+    border-bottom:1px solid #dddddd;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.edit{
+    float: left;
+    width: 10%;
+    height: 100%;
+    font-size: 20px;
+    color:grey;
+    border-right:1px solid #dddddd;
+    text-align:center;
+  
+}
+.status{
+    float: left;
+    width: 15%;
+    height: 100%;
+    border-right:1px solid #dddddd;
+    font-size: 20px;
+    color:grey;
+    text-align:center;
+}
+
+.CSID{
+    text-align:center;
+    float: left;
+    width: 10%;
+    height: 100%;
+    border-right:1px solid #dddddd;
+    font-size: 20px;
+    color:grey;
+}
+.inboundFax{
+    text-align:center;
+    float: left;
+    width: 10%;
+    height: 100%;
+    border-right:1px solid #dddddd;
+    font-size: 20px;
+    color:grey;
+
+}
+.Pages{
+    text-align:center;
+    float: left;
+    width: 10%;
+    height: 100%;
+    border-right:1px solid #dddddd;
+    font-size: 20px;
+    color:grey;
+}
+.RecievedDate{
+    text-align:center;
+    float: left;
+    width: 35%;
+    height: 100%;
+    color:grey;
+    font-size: 20px;
+}
+body{
+     font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+     
+}
+.FaxNewHeader{
+    width:100%; 
+    float:left; 
+    color:#601625 ;
+   
+ 
+    
+    height: 2%;
+    text-align:center;
+    padding-top:0.5%;
+    padding-bottom:1%;
+    font-size: 30px;
+}
+.framedTif{
+    float:left;
+    height:auto;
+    width:100%;
+}
+    
+
+.IFrame3 {
+    position: absolute;
+    top: 5%;
+    bottom: 10%;
+    right: 10%;
+    left: 20%;
+    background-color: white;
+    width: 80%;
+    height: 90%;
+    z-index: 2001;
+    animation: 0.7s fromBottom;
+    text-align: center;
+}
+
+.main{
+  position: fixed;
+  top:0px;
+  right:0px;
+  left:0px;
+  bottom:0px;
+  z-index: 9000000000000000000000000;
+  display: grid;
+ 
+}
+.cal{
+    
+  border-radius: 10px;
+  width: 40%;
+  height: 60%;
+  float:left;
+  margin-left:30%;
+  margin-right:30%;
+  margin-top:10%;
+  opacity: 1;
+  min-height: 350px;
+  background-color: white;
+  
+}
+.daysContainer{
+  float:left;
+  width: 100%;
+  height: 80%;
+  overflow-Y:auto;
+}
+.SingleDay{
+  font-size: 18px;
+  padding-top: 0.5em;
+  color: #3F5068;
+  text-shadow: 0.5px 0px 0.5px lavender;
+  text-align: center;
+  float: left;
+  cursor:pointer;
+  margin: 2%;
+  width: 10%;
+  height: 10%;
+}
+.SingleDay:hover{
+  color: white;
+  background-color: #3F5068;
+}
+.singleDrop:hover{
+    background-color:#3F5068;
+    color:white;
+}
+.singleDrop{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:auto;
+    height:30px;
+    text-align:center;
+    padding:2px;
+    font-size:16px;
+    color:#3F5068;
+    cursor:pointer;
+}
+.Month {
+    float: left;
+    height: 8%;
+    width: 100%;
+    font-size: 18px;
+    padding-top: 0.5em;
+    color: #3F5068;
+    text-shadow: 0.5px 0px 0.5px lavender;
+    text-align: center;
+    background-image: url("/img/blackDrop.png");
+    background-position: 55% 30%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    cursor: pointer;
+}
+.Month:hover{
+    background-color:#3F5068;
+    color:white;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+.Year{
+   float:left;
+  height:8%;
+  width:100%;
+  font-size: 18px;
+  min-height: 30px;
+  padding-top: 0.5em;
+  color: #3F5068;
+  text-shadow: 0.5px 0px 0.5px lavender;
+  text-align: center;
+  background-image:url("/img/blackDrop.png");
+  background-position: 55% center;
+  background-repeat:no-repeat;
+  background-size:10px;
+  cursor:pointer;
+}
+.Year:hover{
+   background-color:#3F5068;
+   color:white;
+}
+.ArrowLeft{
+   position:absolute;
+  top: 40%;
+  left: 0px; 
+  width: 80px;
+  height: auto;
+  margin-top:10px;
+  float:left;
+  max-height: 100%;
+  margin: auto;
+  cursor:pointer;
+  transform: rotate(90deg);
+  transition: all .25s ease-in-out;
+}
+.ArrowLeft:hover{
+    padding:0.2%;
+    border:1px solid white;
+    background-color:rgb(0, 102, 153); 
+    border-radius:50%; 
+}
+.ArrowRight{
+  transition: all .25s ease-in-out;
+  position:absolute;
+  top: 40%;
+  right: 0px; 
+  width: 80px;
+  height: auto;
+  margin-top:10px;
+  float:left;
+  max-height: 100%;
+  margin: auto;
+  cursor:pointer;
+  transform: rotate(-90deg);
+}
+.ArrowRight:hover{
+    padding:0.2%;
+    border:1px solid white;
+    background-color:rgb(0, 102, 153); 
+    border-radius:50%; 
+}
+.SearchButton{
+    height: 1%;
+    padding-top:0.5%;
+    padding-bottom: 2%; 
+    width: 20%;
+    margin-left: 30%; 
+    border:2px solid rgb(64, 0, 23);
+    background-color:  rgba(64, 0, 23,0.7);
+    color: white;
+    text-align:center; 
+    color:white;
+    box-shadow:2px 2px 5px grey;
+    float:left;
+    cursor:pointer;
+    border-radius:10px;
+    margin-bottom:4px;
+    font-size:20px;
+}
+.SearchButtonSmall{
+    height: 55%;
+    cursor:pointer;
+    margin-top:0.2%;
+    padding-top:1%;
+    padding-bottom: 1%; 
+    width: 10%;
+    margin-left: 2%; 
+    border:1px solid rgb(64, 0, 23);
+  background-color:  rgba(64, 0, 23,0.8);
+  color: white;
+    text-align:center; 
+    color:white;
+    box-shadow:2px 2px 5px grey;
+    float:left;
+    border-radius:10px;
+    margin-bottom:4px;
+    font-size:18px;
+    transition: all .25s ease-out;
+}
+.SearchButtonSmall:hover{
+    transform:scale(1.1);
+}
+.SearchButton:hover{
+    transform:scale(1.1);
+}
+.PagingContaier{
+    float:left;
+    width: 20%; 
+    height: 15%; 
+    margin-left:20%;
+    margin-top:1%;
+    margin-bottom:1.5%;
+
+}
+.PagingLeftArrow{
+    width: 30px; 
+    height: auto; 
+    float: left; 
+    transform:rotate(90deg);
+
+}
+.PagingRightArrow{
+     width: 30px; 
+    height: auto; 
+    float: left; 
+    margin-left:auto;
+    transform:rotate(-90deg);
+}
+.SinglePageLink{
+    width: 20px; 
+    height: auto;
+    font-size: 22px;
+   color: rgb(64, 0, 23);
+    float: left; 
+    text-align:center;
+    margin: 5px;
+}
+.SinglePageLinkCurrentPage{
+    width: 20px; 
+    height: auto;
+    font-size: 22px;
+    color: white;
+    background:rgba(64, 0, 23,0.8);
+    float: left; 
+    text-align:center;
+    margin: 5px;
+}
+.CArrowEdit{
+  margin-left: 2px;
+  margin-top: -3px;
+}
+.CArrowEdit:hover{
+    transform:scale(1.1);
+}
+.SearchFormViewer{
+    float:left;
+    width:99.9%;
+    height:48%;
+}
+
+.ServiceAndAtt{
+    float:left;
+    height:auto;
+    width: 64%;
+    margin-left:0.5%;
+    
+    
+    border-left:1px solid silver;
+    border-right:1px solid silver;
+}
+.SAHeader{
+    float:left;
+    height:30%;
+    background:slategrey;
+
+    width: 100%;
+    color: white;
+    padding-top:0.3%;
+    padding-bottom:0.3%;
+
+}
+.SAbody{
+     float:left;
+        height:67%;
+     width: 100%;
+     background-color:white;
+     border-bottom: 2px solid silver;
+}
+.In{
+    float:left;
+    height:100%;
+    width: 20%;
+    font-size:20px;
+    text-align:center;
+}
+.Services{
+    float:left;
+    height:100%;
+    width: 80%;
+    font-size:20px;
+    text-align:center;
+}
+.SingleCheck{
+    float: left;
+    height: 45px;
+    width: 20%;
+}
+.CheckBox{
+    margin-bottom:20%;
+    margin-top: 4%;
+    float:left;
+    height:20px;
+    width:8%;
+    margin-left: 11%;
+    background-color: white;
+    border:1px solid silver; 
+    box-shadow: 2px 2px 4px silver;
+}
+.Label{
+    float:left;
+    height:80%;
+    padding-top:5%;
+    padding-left:3%;
+    width:70%;
+    font-size:18px;
+    color: rgb(63, 80, 104);
+    text-align:left;
+}
+
+ .SmallFaxHeader{
+     width:64%;
+     margin-left:0.5%;
+     float:left;
+     height:5%;
+     margin-top:0.8%;
+     padding-top:0.5%;
+     background-color:slategrey;
+ }
+ .FilterContainer{
+     float:left;
+     width: 20%;
+     height:100%;
+ }
+  .Filterlabel{
+     float:left;
+     width: 20%;
+     height:80%;
+     font-size:18px;
+     text-align:center;
+     padding-top:2%;
+ }
+  .Filter{
+      outline:none;
+      border:1px solid silver; 
+      float:left;
+      width:90%;
+      margin-left:3%;
+      margin-top:2%;
+      margin-bottom:4%;
+      height:90%;
+      border-radius:8px;
+      font-family:"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+      font-size:18px;
+      background-image: url("/img/blueSearch.png");
+      background-repeat: no-repeat;
+      background-position: 94% center;
+      background-size: 15px;
+  }
+  .BackButton{
+      font-family:"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+      font-size:18px;
+      position:absolute;
+      top:13.5%;
+      left:0.1%;
+      width: 250px;
+      font-size:20px;
+      z-index:10000;
+      height:20px;
+      color:rgba(64, 0, 23,0.7);;
+      cursor:pointer;
+  }
+  .BackButton:hover{
+    border:2px solid rgb(64, 0, 23);
+    background-color:  rgba(64, 0, 23,0.7);
+    color: white;
+    padding:0.15%;
+    width: auto;
+    padding-right:0.5%;
+    border-radius:10px;
+    transition: all .25s ease-in-out;
+    cursor:pointer;
+  }
+  .backArrow{
+      margin-top:8px;
+  }
+  .SearchLoader{
+    float: left;
+    margin-top: 5%;
+    margin-left: 40%;
+    height: auto;
+    width: 10%;
+  }
+  .footer{
+    float: left;
+    height: auto;
+    width: 100%;
+    
+  }
+  .FooterContainer{
+    float:left;
+    height:100%; 
+    width:100%;
+    background-color: rgba(64, 0, 23, 0.05);
+    border-top:20px solid rgba(64, 0, 23, 0.85);
+  }
+  .FooterColContainer1{
+      float:left;
+      height:75%;
+      width:38%;
+      margin-left:1.5%;
+  }
+  .FooterImageContainer{
+         float: left;
+    height: 20%;
+    width: 100%;
+    /* margin-bottom: 10px; */
+    margin-top: 30px;
+  }
+  .imgContain{
+    margin-left:28%;
+    height:100%;
+    width: 60%;
+    border-radius:4px;
+  }
+  .smallImg{
+      float:left;
+      max-width: 104%;
+      height: auto;
+      margin:3%;
+
+  }
+  .smallImg:hover{
+      transform:scale(1.02);
+
+  }
+  .hospitalLogo{
+    float: left;
+    max-height: 135px;
+    height: auto;
+    width: 150px;
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+   .hospitalLogo:hover{
+      transform:scale(1.02);
+
+  }
+
+   .framedBody{
+      height: 60%; 
+      float:left;
+      width:100%;
+   }
+   .NameAndInput{
+       float:left;
+       height: 15%;
+       width:100%;
+       margin-top: 3%;
+   }
+   .InputLabel{
+       float:left; 
+       height:80%;
+       padding-top:2%;
+       width: 20%; 
+       font-size: 18px; 
+       color: rgb(63, 80, 104); 
+   }
+   .PtDet{
+       float:left;
+       height:15%;
+       width:60%;
+
+   }
+    .singlePtDet{
+       float:left;
+       height:20%;
+       font-size: 16px;
+       width:100%;
+       padding-top:10px;
+       padding-bottom:10px;
+       text-align:center;
+      
+
+   }
+    .whiteX{
+        height:40px; 
+        width: 40px;
+        Top: 20px; 
+        position:absolute; 
+        right: 50px;
+        cursor:pointer;
+        transition: all .25s ease-in-out;
+    }
+    .whiteX:hover{
+        padding:0.2%;
+        border:1px solid white;
+        transform:scale(1.1);
+        background-color:rgb(0, 102, 153); 
+        border-radius:50%;
+        
+    }
+    .ServiceObj{
+        float: left;
+        height: auto;
+        width: 90%;
+       
+        margin-left:5%;
+        border:1px solid rgb(63, 80, 104);
+
+    }
+    .ServiceSmallObj{
+        float: left;
+        height: auto;
+        width: 50%;
+        margin-right: 40%;
+        margin-left:5%;
+        margin-bottom:3%;
+        border:1px solid rgb(63, 80, 104);
+
+    }
+    .ServiceHeader{
+        float: left;
+        height: 10%;
+        width: 40%;
+        font-size:22px;
+        margin-left:10%;
+        border-bottom:1px solid rgb(63, 80, 104);
+        margin-top: 1%;
+    }
+    .Welcome{
+        float:left;
+        height:30%;
+        width: 50%;
+        margin-left:40%;
+        font-size:18px;
+        margin-top:3%;
+        color: rgb(64, 0, 23);
+        text-align:right;
+        
+    }
+    .SingleApp{
+        background-color:rgba(64, 0, 23,0.4) ;
+        float:left;
+        width:14.5%;
+        height:40%;
+        margin-bottom:1%;
+        margin-left:1.4%;
+        cursor:pointer;
+        border-radius: 3%;
+        
+        box-shadow:2px 2px 10px grey;
+    }
+    .SingleApp:hover{
+         transition: all .30s ease-in-out;
+           
+         
+         background-color: #5DADE2   ;
+         
+        transform:scale(1.02);
+        
+          
+        box-shadow:2px 2px 15px grey;
+    }
+    .titleApp{
+       
+        float:left;
+        height:auto;
+        min-height:20%;
+        width:100%;
+        font-size:18px;
+        padding-top:6%;
+       border-bottom-left-radius:5px;
+       border-bottom-right-radius:5px;
+        
+        text-align:center;
+        color:white; 
+        background-color:rgb(64, 0, 23);
+    }
+    .SingleAppImgHolder{
+        height:75%;
+        width:100%;
+        float:left;
+    }
+    .titleImage{
+          padding-bottom: -3px;
+          display: block;
+          margin-left:auto;
+          margin-right: auto;
+          max-width: 100%;
+          padding-top: 12px;
+          max-height: 100%;
+    }
+    .Appholder{
+        height: 80%;
+        width:90%; 
+        margin-left:5%;
+        overflow:auto;
+        padding-top:2%;
+        border:2px solid rgba(64, 0, 23,0.6);
+        background-color:ghostwhite;
+        border-radius:5px;
+        box-shadow:2px 2px 6px grey;
+
+    }
+
+    
+.toastContainer{
+  height: 3em;
+  position: fixed;
+  left: 50%;
+  bottom: 1em;
+  z-index: 100;
+}
+.ConfirmRemoveContainer{
+  height: 100px;
+  position: fixed;
+  left: 25%;
+  bottom: 50%;
+  z-index: 100;
+}
+.ConfirmRemove {
+  animation: 0.4s slide-up2;
+  margin-top: 0%;
+  line-height: 3em;
+  height: auto;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #F5F5F5;
+  border: 0.1em solid #F5F5F5;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 6px #444;
+}
+.toast {
+  animation: 1s slide-up;
+  margin-top:0%;
+  line-height: 3em;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #F5F5F5;
+  border: 0.1em solid #F5F5F5;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 6px #444;
+}
+.RemoveButton {
+  border-radius: 3px;
+  border:2px solid rgb(64, 0, 23);
+  background-color:  rgba(64, 0, 23,0.7);
+  color: white;
+  cursor:pointer;
+  box-shadow: 1px 1px 4px grey;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+  line-height: 2em;
+  vertical-align: middle;
+ 
+}
+.RemoveButton:hover{
+    transform:scale(1.01);
+}
+@keyframes slide-up2 {
+  from {
+    margin-top: 100%;
+
+  }
+
+  to {
+    margin-top: 0%;
+
+  }
+}
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 5em;
+  }
+
+  to {
+    margin-top: 0%;
+    height: 3em;
+  }
+}
+
+.TempEmergency{
+    float:left;
+    height:800px; 
+    width:100%; 
+    margin-top:10%;
+}
+.emheader{
+    float:left; 
+    height:8%; 
+    width: 100%; 
+    text-align:center; 
+    font-size:200%;
+    text-shadow:0.5px 0.5px 1px grey;
+    color: red; 
+    font-weight: bold;
+}
+.emBody{
+     float:left; 
+    height:92%; 
+    width: 100%; 
+}
+.emergency{
+    float:left; 
+    height:100%; 
+    width: 90%;
+    margin-left:5%; 
+}
+.FileElem{
+    height: 100%;
+    width:70%;
+    float:left;
+    margin-top:2%;
+}
+.FileElemSmall{
+    height: 100%;
+    width:40%;
+    float:left;
+    margin-top:2%;
+}
+.exit{
+    width:60%;
+    margin-left:20%;
+    float:left;
+    background-color: rgb(245, 245, 245);
+    cursor:pointer;
+    box-shadow:2px 2px 4px black;
+    height:8%;
+    margin-top:7%;
+    padding-top:1.5%;
+    border-radius:10px;
+    font-size:120%;
+    text-align:center;
+    transition: all .25s ease-in-out;
+}
+.exit:hover{
+    transform:scale(1.1);
+    background-color:rgb(0, 102, 153); 
+    color:white;
+}
+.Covid{
+    float: left;
+    height: 88%;
+    width: 100%;
+    overflow:hidden;
+    padding-top:1%;
+    padding-bottom:1%;
+}
+.Community{
+    width:53.4%;
+    margin-left:1%;
+    margin-right:1%;
+    height:100%;
+    border-radius:5px;
+    float:left;
+    background-color:rgba(64, 0, 23,0.65);
+
+}
+.CommunityTitle{
+    padding-left:5%;
+    float:left;
+    height:8%;
+    width:85%;
+    padding-top:2.5%;
+    padding-bottom:2%;
+    color:rgb(255, 102, 0);
+    font-size:140%;
+    text-shadow: 0.1px 0.1px 1px grey;
+}
+.CommunityBody{
+    float:left;
+    height:auto;
+    width:95%;
+    padding-left:5%;
+    padding-bottom:2%;
+    line-height:140%;
+    font-size:110%;
+    color:white;
+     text-shadow: 0.1px 0.1px 1px black;
+}
+.CommunityFooter{
+    float:left;
+    height:15%;
+    width:100%;
+    margin-bottom:1%;
+}
+.ORMCButton{
+    float:left;
+    height:90%;
+    width:42%;
+    border:2px solid #cc4e00;
+    color:white;
+    font-size:120%;
+    text-align:center;
+    margin-left:5%;
+    padding-top:1%;
+    border-radius:10px;
+    background-color: rgb(243, 116, 34);
+    cursor:pointer;
+    text-decoration:none;
+    padding-bottom:1%;
+    transition: all .25s ease-in-out;
+    text-shadow: black 0.1px 0.1px 1px;
+}
+.ORMCButton:hover{
+    text-decoration:underline;
+    color:silver;
+    border:2px solid #cc4e00;
+    background-color: #cc4e00;
+}
+.CRMCButton{
+    float:left;
+    height:90%;
+    width:42%;
+    margin-left:5%;
+    font-size:120%;
+    border-radius:10px;
+    border:2px solid #026440;
+    color:white;
+    background-color:#22b573;
+    padding-top:1%;
+    padding-bottom:1%;
+    text-shadow: black 0.1px 0.1px 1px;
+    text-align:center;
+    cursor:pointer;
+    text-decoration:none;
+    transition: all .35s ease-in-out;
+}
+.CRMCButton:hover{
+    text-decoration:underline;
+    color:silver;
+    background-color:#026440;
+}
+.SingleCovidCard{
+    float: left;
+    height: 98%;
+    margin-top:0.5%;
+    width: 25%;
+    margin-left:2.5%;
+    transition: all .25s ease-in-out;
+}
+.covidTitle {
+    height: 12%;
+    width: 100%;
+    float: left;
+    color: rgb(64, 0, 23);
+    padding-top: 0.2%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 140%;
+    background-color:rgba(64, 0, 23,0.06);
+    padding-bottom:0.3%;
+    padding-top:0.5%;
+    border-bottom:1px solid silver;
+}
+.imgHolderAnti{
+    float:left; 
+    width:14%;
+    height: 100%;
+    margin-left:3%;
+}
+.CovidAntiBod{
+    float:left; 
+    width:100%;
+    margin-top:10%;
+    height:auto;
+    cursor:pointer;
+    transition: all .25s ease-in-out;
+}
+.CovidAntiBod:hover{
+    transform:scale(1.02);
+    box-shadow:2px 2px 6px grey;
+}
+.theElem{
+    height:auto;
+    width:100%;
+    margin-bottom:1%;
+    margin-top:-0.85%;
+    float:left;
+    background-color:white;
+     border-bottom:1px solid silver;
+}
+.Contacts{
+    float:left;
+    height:2%;
+    width: 20%;
+    border-radius:50%;
+    margin-left:40%;
+    margin-right:40%;
+}
+.ContactsIcon{
+    float:left;
+    height:auto;
+    width:20%;
+    margin-left:40%;
+}
+.ContactsLable{
+    width:80%;
+    margin-left:10%;
+    height:10%;
+    padding-top:2%;
+    text-align:center;
+    float:left;
+    color:silver;
+    text-shadow:0.1px 0.1px 1px grey;
+    font-size:120%;
+}
+.TitleElement{
+    width:40%;
+    height:auto;
+    min-height:50px;
+    margin-left:30%;
+    float:left;
+    color:rgb(0, 102, 153);
+    background-color:white;
+    border:1px solid silver;
+    border-radius:10px;
+}
+.Title{
+    float:left;
+    height:60%;
+    padding-top:2%;
+    font-size:140%;
+    text-align:center;
+    width:70%;
+    margin-left:15%;
+    font-weight:bold;
+    
+}
+.ContactsImg{
+    height:60%;
+    padding:1% 1% 1% 1%;
+    width:5%;
+    float:left;
+    transition: all .25s ease;
+    cursor:pointer;
+}
+.ContactsImg:hover{
+    background-color:silver;
+    border-radius:10px;
+
+}
+.ContactMenu{
+    height:98%; 
+    width: 65%; 
+    background-color:white;
+    float:left;
+    box-shadow:2px 2px 20px black;
+    left: -2000px;
+    position:absolute;
+    transition:left 0.3s ease;
+    border-right:4px solid #a8b2bb;
+    top:0px;
+    overflow:auto;
+    overflow-x:hidden;
+    z-index:70000000000000000000000000000;
+}
+.Section{
+    width:100%;
+    height:auto;
+    float:left;
+    border-top:5px solid rgb(0, 102, 153);
+}
+.SectionTitle{
+    height:5%;
+    width:100%;
+    float:left;
+    padding-top:1%;
+    font-size:150%;
+    color:rgb(0, 102, 153);
+    text-shadow:0.1px 0.1px 1px black;
+    font-weight:bold;
+    padding-left:2%;
+}
+.Contact{
+    height: 3%;
+    width:96%;
+    padding-top:1%;
+    padding-bottom:1%;
+    float:left;
+    margin-left:1%;
+    font-size:16px;
+    text-align:left;
+    padding-left:3%;
+    color: rgb(0, 102, 153);
+    font-size:120%;
+    text-decoration:none;
+  
+    transition: display .25s ease-out; 
+}
+.Contact:hover{
+    background-color:silver;
+    border-left:4px solid blue;
+    color: blue;
+}
+.menubutton{
+    height:30px; 
+    float:left;
+    width:30px;
+    margin-top:0.2%;
+    margin-left:3%;
+    cursor:pointer;
+}
+.menubutton:hover{
+    transform:scale(1.05);
+}

@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Monthly";
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var dt = jss.Serialize(ViewBag.Data);
+    var gp = jss.Serialize(ViewBag.Groups);
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string OnCallJS = "/Scripts/OnCall.js?v=" + version;
+    string OnCallCss = "/Content/OnCall.css?v=" + version;
+}
+
+<script type="text/javascript" src="@OnCallJS"></script>
+<link rel="stylesheet" type="text/css" href="@OnCallCss">
+
+<script>
+
+    var Groups = @Html.Raw(gp);
+    var Data = @Html.Raw(dt);
+    OnCallDeskTop.DrawMonth(Groups, Data, "@ViewData["AmountOfDays"]", "@ViewData["Month"]", "@ViewData["Year"]","@ViewData["Entity"]", "@ViewData["Department"]", "@ViewData["UserName"]","@ViewData["id"]","@ViewData["Access"]", "@ViewData["Admin"]");
+    setTimeout(function(){
+        document.getElementById("MainContent").style.marginTop = "120px";
+    },200);
+</script>

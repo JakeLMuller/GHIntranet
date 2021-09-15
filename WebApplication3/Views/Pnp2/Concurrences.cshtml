@@ -1,0 +1,15 @@
+﻿@{
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var AllFilesJson = jss.Serialize(ViewBag.AllFiles);
+    
+}
+<script type="text/javascript" src="~/Scripts/PnpUserAndMain.js"></script>
+<script type="text/javascript" src="~/Scripts/Concurence.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/PnpUserAndMain.css">
+<script>
+    var AllFiles = @Html.Raw(AllFilesJson);
+    Pnp.GobalUsers = @Html.Raw(@ViewData["users"]);
+    var tempData = {"Items":Pnp.GobalUsers};
+    Pnp.GobalUsers = tempData;
+    Pnp.Concurences("@ViewData["UserName"]", "@ViewData["fullName"]", AllFiles,"@ViewData["ViewApproved"]");
+</script>

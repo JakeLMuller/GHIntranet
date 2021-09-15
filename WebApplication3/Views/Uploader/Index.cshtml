@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "View Uploads - GHVHS";
+}
+
+<script type="text/javascript" src="~/Scripts/Uploads.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/Uploader.css">
+
+<script>
+    var j= "@ViewData["json"]";
+    Uploader.Display(j, "@ViewData["username"]", "@ViewData["search"]");
+    var tobring = setTimeout(function () {
+        document.getElementById("MainContent").style.marginTop = "120px";
+        document.getElementById("Footer").style.display = "none";
+    }, 100);
+    var canvas = document.getElementById("canvas");
+    var header = document.getElementById("header");
+    var MainContent = document.getElementById("MainContent");
+    header.style.transition = "height .25s ease";
+    MainContent.style.transition = "margin-top .25s ease";
+    canvas.onscroll = function () {
+        var checkPosts = this.querySelectorAll(".SinglePostImg");
+        if (checkPosts.length > 1) {
+            var headerElement = document.getElementById("header");
+            var MainContent2 = document.getElementById("MainContent");
+            var scroll = this.scrollTop;
+            var getAllContent = document.getElementById("DisplayForm");
+            var getheaderContainer = document.getElementById("headerContainer");
+            if (scroll > 10) {
+                if (headerElement.style.display != "none") {
+                    if (!document.getElementById("headerimage")) {
+                        var headerimage = GHVHS.DOM.create({ "Type": "img", "Class": "headerImg1", "Id": "headerimage", "Style": "top:-20px;position:fixed;", "Src": "/img/logoTrans.png", "Parent": MainContent2 });
+                        headerimage.onclick = function () {
+                            window.location.href = "/";
+                        }
+                        getAllContent.style.paddingTop = "8%";
+                        headerimage.style.zIndex = "900000000000000000000000000000000000000000000000000000";
+                        getheaderContainer.style.zIndex = "900000000000000000000000000000000000000000000000000000";
+                        headerimage.style.transition = "top .45s ease";
+                        var headerImg = document.getElementById("headerImg1");
+                        headerimage.style.position = "fixed";
+                        headerimage.style.width = headerImg.offsetWidth + "px";
+                        headerimage.style.height = headerImg.offsetHeight + "px";
+                        setTimeout(function () {
+                            headerimage.style.top = headerImg.offsetTop + "px";
+                        }, 10);
+                        headerimage.style.left = headerImg.offsetLeft + "px";
+                        headerImg.style.display = "none";
+                    }
+                    headerElement.style.height = "1px";
+                    MainContent2.style.marginTop = "0px";
+                    setTimeout(function () {
+                        headerElement.style.display = "none";
+                    }, 200);
+                }
+            } else {
+                if (headerElement.style.display == "none") {
+                    headerElement.style.display = "block";
+                    setTimeout(function () {
+                        setTimeout(function () {
+                            var headerImg = document.getElementById("headerImg1");
+                            var headerImg2 = document.getElementById("headerimage");
+                            var getheaderContainerTemp = document.getElementById("headerContainer");
+                            if (headerImg2) {
+                                headerImg2.parentElement.removeChild(headerImg2);
+                            }
+                            headerImg.style.display = "block";
+                            getheaderContainerTemp.style.zIndex = "unset";
+
+                        }, 200);
+                        MainContent2.style.marginTop = "120px";
+                        headerElement.style.height = "12%";
+                        var headerImgTemp = document.getElementById("headerimage");
+                        if (headerImgTemp) {
+                            headerImgTemp.style.top = "-20px";
+                        }
+
+                    }, 10);
+                }
+            }
+        }
+    }
+</script>
+

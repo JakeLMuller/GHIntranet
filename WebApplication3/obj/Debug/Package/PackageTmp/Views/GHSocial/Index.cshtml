@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = null;
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string GHJS = "/Scripts/GHSocial.js?v=" + version;
+    string GHCSS = "/Content/GHSocial.css?v=" + version;
+    string mainJS = "/Scripts/main.js?v=" + version;
+    string mainCSS = "/Content/main.css?v=" + version;
+    string uploderJs = "/Content/Uploader.css?v=" + version;
+}
+
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="@GHJS"></script>
+    <link rel="stylesheet" type="text/css" href="@GHCSS">
+    <link rel="icon" href="@Url.Content("~/img/FavIcon.png")" />
+    <title>@ViewBag.Title</title>
+    <script type="text/javascript" src="@mainJS"></script>
+    <link rel="stylesheet" type="text/css" href="@mainCSS">
+    <link rel="stylesheet" type="text/css" href="@uploderJs">
+ </head>
+ <body>
+     <div id="Sky" class="Sky"></div>
+    <script>
+        GHSocial.HomePage();
+
+    </script>
+ </body>
+</html>

@@ -1,0 +1,18 @@
+﻿@{
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var userInfoJson = jss.Serialize(ViewBag.AllFiles);
+}
+<script type="text/javascript" src="~/Scripts/PnpUserAndMain.js"></script>
+<script type="text/javascript" src="~/Scripts/PnpConvos.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/PnpUserAndMain.css">
+<link rel="stylesheet" type="text/css" href="~/Content/PnpConvo.css">
+<script>
+    var AllFiles = @Html.Raw(userInfoJson);
+    var check = "@ViewData["Id"]";
+    if (check != ""){
+        PnpConvos.SingleConvo("@ViewData["UserName"]", "@ViewData["fullName"]", AllFiles,"@ViewData["Id"]","@ViewData["SubId"]","@ViewData["orderBy"]", "@ViewData["Search"]"  );
+    }else{
+        PnpConvos.AllConvos("@ViewData["UserName"]", "@ViewData["fullName"]", AllFiles,"@ViewData["Id"]","@ViewData["SubId"]","@ViewData["orderBy"]", "@ViewData["Search"]"  );
+    }
+
+</script>

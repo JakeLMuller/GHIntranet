@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<script type="text/javascript" src="~/Scripts/OnCall.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/OnCall.css">
+
+
+<div id="Main" class="hide">
+    <div class="hide" id="temp">@ViewData["selectedGroup"]</div>
+    <div class="hide" id="temp3">@ViewData["AllGroups"]</div>
+    <div class="hide" id="temp2">@ViewData["Calls"]</div>
+</div>
+
+<script>
+    var SingleGroupJson = OnCall.decodeJson(document.getElementById("temp").innerHTML, "Y");
+    var GroupsJson = OnCall.decodeJson(document.getElementById("temp3").innerHTML, "Y");
+    var CallJson = OnCall.decodeJson(document.getElementById("temp2").innerHTML, "Y");
+    OnCall.DrawDalyView("@ViewData["groupId"]", "@ViewData["DayOfTheWeek"]","@ViewData["date"]","@ViewData["UserName"]", SingleGroupJson, GroupsJson, CallJson);
+    var getMain = document.getElementById("Main");
+    while (getMain.firstChild) {
+        getMain.removeChild(getMain.firstChild);
+    }
+</script>
+

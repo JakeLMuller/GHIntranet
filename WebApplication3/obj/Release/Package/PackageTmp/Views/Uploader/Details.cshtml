@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "PtFax";
+}
+
+<script type="text/javascript" src="~/Scripts/Uploads.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/Uploader.css">
+
+<script>
+    var j= "@ViewData["json"]";
+    Uploader.SingleView(j);
+    var tobring = setTimeout(function () {
+        document.getElementById("header").style.display = "none";
+        document.getElementById("Footer").style.display = "none";
+    }, 100);
+</script>

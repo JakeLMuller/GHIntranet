@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Admin";
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var SG = jss.Serialize(ViewBag.selectedGroup);
+    var AllG = jss.Serialize(ViewBag.AllGroups);
+    var PInG = jss.Serialize(ViewBag.PeopleInGroup);
+    var AllP = jss.Serialize(ViewBag.AllPeople);
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string OnCallJS = "/Scripts/OnCall.js?v=" + version;
+    string OnCallCss = "/Content/OnCall.css?v=" + version;
+}
+
+<script type="text/javascript" src="@OnCallJS"></script>
+<link rel="stylesheet" type="text/css" href="@OnCallCss">
+
+
+<script>
+    var Group = @Html.Raw(SG);
+    var AllGroups = @Html.Raw(AllG);
+    var PeopleInGroup = @Html.Raw(PInG);
+    var AllPeople = @Html.Raw(AllP);
+    OnCallDeskTop.DrawAdminPage("@ViewData["UserName"]", Group, AllGroups, PeopleInGroup, AllPeople, "@ViewData["groupId"]");
+
+</script>

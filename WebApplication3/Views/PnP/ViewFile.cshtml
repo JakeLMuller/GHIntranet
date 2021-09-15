@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <script type="text/javascript" src="~/Scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/main.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Uploader.css">
+</head>
+<body id="body">
+    <div class="FaxNewHeader" style="font-weight:bold; text-shadow:0.5px 0.5px 1px grey" id="FaxNewHeader">@ViewData["name"] </div>
+    <iframe class="framedTif" id="framedTif" src="@ViewData["path"]" style="margin-top:3%;height: 105%"></iframe>
+    
+    <script>
+        document.getElementById("body").style.height = "@ViewData["height"]" + "px";
+    </script>
+</body>
+</html>

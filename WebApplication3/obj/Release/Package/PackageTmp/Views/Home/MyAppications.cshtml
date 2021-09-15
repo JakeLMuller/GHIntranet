@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "My Apps";
+}
+
+<div class="hide" id="temp">@ViewData["json"]</div>
+<script>
+    
+
+    var data1 = GHVHS.DOM.decodeJson(document.getElementById("temp").innerHTML, "Y");
+    GHVHS.DOM.DrawMyApps(data1);
+    
+    var temp2 = document.getElementById("canvas");
+    document.getElementById("temp").parentElement.removeChild(document.getElementById("temp"));
+</script>

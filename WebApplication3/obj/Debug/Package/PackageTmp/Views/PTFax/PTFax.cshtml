@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "PtFax";
+}
+<div class ="hide" id = "temp">@ViewData["PTjson"]</div>
+<div class ="hide" id="temp3">@ViewData["Faxes"]</div>
+<div class="hide" id="temp2">@ViewData["QueuedServices"]</div>
+<div class="hide" id="temp4">@ViewData["AllServices"]</div>
+<script type="text/javascript" src="~/Scripts/fax.js"></script>
+<script>
+    var data1 = Fax.decodeJson(document.getElementById("temp").innerHTML,"Y");
+    var data2 = Fax.decodeJson(document.getElementById("temp2").innerHTML, "Y");
+    var data3 = Fax.decodeJson(document.getElementById("temp3").innerHTML, "Y");
+    var data4 = Fax.decodeJson(document.getElementById("temp4").innerHTML, "Y");
+    Fax.PtFaxDetail(data1, data2, data3, data4, "@ViewData["route"]", "@ViewData["path"]","@ViewData["ViewOnly"]" );
+</script>

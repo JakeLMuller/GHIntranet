@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GHVHS_Intranet_FaxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblInfusionFaxReceivedFax">
+    <Key>
+      <PropertyRef Name="FaxID" />
+    </Key>
+    <Property Name="FaxID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CallerID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pages" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoutingInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FaxSize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TransmissionStart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TransmissionEnd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentFaxStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FileLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ArchiveDate" Type="DateTime" Precision="3" />
+    <Property Name="UpDatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpDatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="GHVHS_Intranet_FaxEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblInfusionFaxReceivedFaxes" EntityType="Self.tblInfusionFaxReceivedFax" />
+  </EntityContainer>
+</Schema>

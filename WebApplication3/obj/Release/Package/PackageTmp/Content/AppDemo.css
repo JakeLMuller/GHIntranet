@@ -1,0 +1,406 @@
+﻿body {
+    font-family:"futura-pt",Arial;
+}
+.canvas{
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    background-color:rgb(248,249,250);
+}
+.topNav{
+    height:5%;
+    width:100%;
+    float:left;
+    background-color:white;
+    box-shadow:2px 2px 4px grey;
+}
+.mainContent{
+    height:90%;
+    width:100%;
+    float:left;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.bottomNav{
+    height:5%;
+    width:100%;
+    float:left;
+    background-color:white;
+    background-color:rgba(64, 0, 23,0.7);
+}
+.left{
+    width:35%;
+    height:auto;
+    float:left;
+    max-height:100%;
+}
+.middle{
+    width:55%;
+    height:100%;
+    float:left;
+}
+.right{
+    width:5%;
+    margin-top:2.5%;
+    height:auto;
+    float:left;
+    max-height:70%;
+    padding-left:1%;
+    padding-right:1%;
+}
+.right2{
+    width:9%;
+    margin-top:4%;
+    height:auto;
+    float:left;
+    max-height:100%;
+    
+}
+.rightClicked{
+    width:5%;
+    margin-top:2.5%;
+    height:auto;
+    float:left;
+    max-height:70%;
+    padding-left:1%;
+    padding-right:1%;
+    background-color:rgba(64, 0, 23, 0.5);
+}
+.Filler{
+    width:83%;
+    height:5%;
+    float:left;
+}
+.SignIn{
+    width: 40%;
+    height:36%;
+    float:left;
+    margin-top:5.5%;
+    margin-left:10%;
+    background-color:white;
+    text-align:center;
+    padding:2%;
+    font-size:80%;
+    border-radius:10px;
+    color:rgba(64, 0, 23, 0.8);
+}
+.menuNav{
+    position:absolute;
+    left:120%;
+    transition: left 0.5s ease 0.2s;
+    height:100%;
+    width:250px;
+    background-color:white;
+}
+.Circle{
+    margin-top:20%;
+    width:115%;
+    margin-left:-7%;
+    float:left;
+    height:60%;
+    margin-bottom:20%;
+    background-color:rgba(64, 0, 23,0.7);
+    border-radius:50%;
+}
+.Title{
+    float:left;
+    height:10%;
+    width:60%;
+    margin-left:20%;
+    margin-top:20%;
+    text-align:center;
+    color:white;
+    font-size:90%
+}
+.fieldHolder{
+    height:11%;
+    margin-top:5%;
+    width:60%;
+    margin-left:20%;
+    float:left;
+}
+.Lable{
+    float:left;
+    height:45%;
+    width:80%;
+    margin-left:2%;
+    text-align:left;
+    color:white;
+    font-size:80%
+}
+.inputField{
+    background-color:white;
+    height:55%;
+    width:100%;
+    display:block;
+    float:left;
+    margin:0px;
+    outline:none;
+    border:none;
+    padding:0px;
+    border-radius:5px;
+     background-color:#ffe6e6;
+}
+.colorbg{
+    width:100%;
+    height:100%;
+    float:left;
+    background-color:rgba(64, 0, 23, 0.7);
+    border:2px solid rgb(64, 0, 23);
+    box-shadow:2px 2px 15px ;
+    border-top:none;
+}
+.button{
+    width:80%;
+    height:2%;
+    float:left;
+    padding-top:2%;
+    padding-bottom:2.5%;
+    border-radius:10px;
+    background-color:rgb(64, 0, 23);
+    border:2px solid rgba(64, 0, 23,0.1);
+    text-align:center;
+    color:white;
+    margin-left:10%;
+    box-shadow:2px 2px 6px #444;
+}
+.IconHolder{
+    float:left;
+    width:24%;
+    padding-top:2%;
+     padding-bottom:2%;
+
+    height:80%;
+}
+.icon{
+    width:30px;
+    height:30px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:40%;
+}
+.IconLabel{
+    width:100%;
+    height:10%;
+    float:left;
+    letter-spacing:0px;
+    
+    color:white;
+    
+    font-size:75%;
+
+    text-align:center;
+}
+.iconSelected{
+    float:left;
+    width:20%;
+    padding-top:2%;
+     padding-bottom:2%;
+    margin-left:4%;
+    height:80%;
+    border-radius:10px; 
+}
+  .Filter{
+      outline:none;
+      border:1px solid silver; 
+      float:left;
+      width:90%;
+      margin-left:5%;
+      margin-top:2%;
+      margin-bottom:4%;
+      height:3.5%;
+      border-radius:8px;
+      font-family:"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+      font-size:18px;
+      background-image: url("/img/blueSearch.png");
+      background-repeat: no-repeat;
+      background-position: 94% center;
+  
+      background-size: 15px;
+  }
+   .Filter::placeholder{
+       color:rgba(64, 0, 23,0.9);
+       font-size:80%;
+       padding-left:5%;
+    }
+  .link{
+    height:2%;
+    padding-top:2%;
+    padding-bottom:2%;
+    width:80%;
+    margin-left:10%;
+    margin-top:5%;
+    color:white;
+    text-align:left;
+    float:left;
+    font-size:120%
+  }
+
+  .whiteButton{
+    width: 25%;
+    height:5%;
+    float:left;
+    margin-top:5.5%;
+    margin-left:5%;
+    margin-top:2%;
+    box-shadow:2px 2px 2px black;
+    background-color:#ffe6e6;
+    text-align:center;
+    padding-top:1.5%;
+    padding-bottom:4%;
+    font-size:60%;
+    float:left;
+    border-radius:10px;
+    color:rgba(64, 0, 23, 0.8);
+}
+
+  .SubHeader{
+      width:100%;
+      background-color:rgba(64, 0, 23, 0.7);
+      height:6%;
+      float:left;
+  }
+  .location{
+      width:100%;
+      height:46%;
+      float:left;
+  }
+  .locoInfo{
+      width: 95%;
+      margin-left:5%;
+      height:30%;
+      float:left;
+      margin-top:5%;
+
+  }
+  .locoName{
+      width: 100%;
+      height:10%;
+      float:left;
+      font-size:100%;
+      color:rgba(64, 0, 23, 0.8);
+      font-weight:bold;
+  }
+  .city{
+      width: 100%;
+      height:10%;
+      float:left;
+      font-size:80%;
+      color:rgba(64, 0, 23, 0.8);
+      font-weight:bold;
+  }
+  .locoAddress{
+    width: 100%;
+    height:8%;
+    float:left;
+    font-size:80%;
+    color:grey;
+    font-weight:bold;
+  }
+  .Open{
+    width: 100%;
+    height:8%;
+    float:left;
+    font-size:80%;
+    color:grey;
+    
+  }
+  .lineSize{
+      width: 30%;
+      height:10%;
+      float:left;
+      font-size:80%;
+      color:rgba(64, 0, 23, 0.8);
+      font-weight:bold;
+  }
+  .videoContainer{
+      height:15%;
+      margin-top:10%;
+      width:90%;
+      margin-left:5%;
+      box-shadow:2px 2px 6px grey;
+      overflow:hidden;
+      border-radius:10px;
+  }
+  .labelC{
+       height:100%;
+      margin-top:10%;
+      width:50%;
+     float:left;
+  }
+  .TopLabel{
+      height:15%; 
+      width: 100%;
+      float:left;
+      color:black;
+      font-weight:bold;
+      font-size:80%;
+      margin-left:5%
+
+  }
+  .bottomLabel{
+      height:10%; 
+      width: 100%;
+      float:left;
+      color:rgba(64, 0, 23, 0.8);
+      font-weight:bold;
+      margin-left:5%
+
+  }
+  .WeirdCircle{
+      width: 35%;
+       margin-top:-7%;
+       float:left;
+       margin-left:15%;
+      border-bottom-left-radius:100%;
+       border-top-left-radius:100%;
+      height:150%;
+      background-color:rgba(64, 0, 23, 0.8);
+  }
+  .IconVideo{
+      width: 60%;
+      height:50%;
+      margin-top:30%;
+      margin-left:20%
+  }
+
+  .slideUp{
+    position:absolute;
+    top:120%;
+    transition: top 0.5s ease 0.2s;
+    height:95%;
+    width:96%;
+    left:2%;
+    background-color:white;
+    overflow-x:hidden;
+    box-shadow:2px 2px 4px 5px silver;
+    border-radius:10px;
+  }
+  .slideUPSub{
+       width:100%;
+    height:100%;
+    float:left;
+    background-color:rgba(64, 0, 23, 0.7);
+    border:2px solid rgb(64, 0, 23);
+    box-shadow:2px 2px 15px ;
+    border-top:none;
+
+  }
+  .LoginForm{
+    margin-top: 2%;
+    width: 90%;
+    margin-left:5%;
+    float: left;
+    height: 55%;
+    margin-bottom: 20%;
+    
+    background-color: white;
+    border-radius: 15px;
+  }

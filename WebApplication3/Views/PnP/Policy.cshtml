@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "View Policy";
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var userInfoJson = jss.Serialize(ViewBag.Meta);
+    var Nav = jss.Serialize(ViewBag.Nav);
+    string PnpMatainence = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainence");
+    string PnpMatainenceMessage = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainenceMessage");
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string PnpJS = "/Scripts/PnpUserAndMain.js?v=" + version;
+    string PnpCSS = "/Content/PnpUserAndMain.css?v=" + version;
+
+}
+<script type="text/javascript" src="@PnpJS"></script>
+<link rel="stylesheet" type="text/css" href="@PnpCSS">
+<script>
+    var UnderMaintenance = "@PnpMatainence";
+    if (UnderMaintenance == "N"){
+        Pnp.Verified = "@ViewData["a"]";
+        Pnp.UserDepartment = "@ViewData["UserDepo"]";
+        Pnp.Navigation =  @Html.Raw(Nav);
+        var Meta = @Html.Raw(userInfoJson);
+        Pnp.SeperateMetaData(Meta);
+        Pnp.ViewItem("@ViewData["ItemId"]",  "@ViewData["UserName"]", "@ViewData["fullName"]",  "@ViewData["ViewOnly"]");
+
+
+        setTimeout(function(){
+            if (document.getElementById("canvas").offsetWidth < 1500) {
+                document.getElementById("header").className = "hide";
+                document.getElementById("Footer").className = "hide";
+                document.getElementById("barTop").style.height = "8%";
+                document.getElementById("MainContent").style.marginTop = "5px";
+                var getSideLinks = document.getElementById("menu").style.display = "none";
+            }
+        }, 200);
+    }else{
+        Pnp.drawMantainenceForPnp(document.getElementById("MainContent"), "@PnpMatainenceMessage")
+    }
+</script>

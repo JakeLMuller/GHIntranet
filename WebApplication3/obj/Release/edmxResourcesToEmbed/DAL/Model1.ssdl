@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GHVHS_Intranet_FaxModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'GHVHS_Intranet_Fax.dbo.tblInfusionFaxReceivedFaxes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblInfusionFaxReceivedFaxes">
+    <Key>
+      <PropertyRef Name="FaxID" />
+    </Key>
+    <Property Name="FaxID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CallerID" Type="varchar" MaxLength="50" />
+    <Property Name="CSID" Type="varchar" MaxLength="50" />
+    <Property Name="ID" Type="varchar" MaxLength="50" />
+    <Property Name="Pages" Type="varchar" MaxLength="50" />
+    <Property Name="RoutingInfo" Type="varchar" MaxLength="50" />
+    <Property Name="FaxSize" Type="varchar" MaxLength="50" />
+    <Property Name="TransmissionStart" Type="varchar" MaxLength="50" />
+    <Property Name="TransmissionEnd" Type="varchar" MaxLength="50" />
+    <Property Name="TSID" Type="varchar" MaxLength="50" />
+    <Property Name="FileName" Type="varchar" MaxLength="75" />
+    <Property Name="CurrentFaxStatus" Type="varchar" MaxLength="10" />
+    <Property Name="FileLocation" Type="varchar" MaxLength="150" />
+    <Property Name="ArchiveDate" Type="datetime" />
+    <Property Name="UpDatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpDatedDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="GHVHS_Intranet_FaxModelStoreContainer">
+    <EntitySet Name="tblInfusionFaxReceivedFaxes" EntityType="Self.tblInfusionFaxReceivedFaxes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblInfusionFaxReceivedFaxes].[FaxID] AS [FaxID], 
+    [tblInfusionFaxReceivedFaxes].[CallerID] AS [CallerID], 
+    [tblInfusionFaxReceivedFaxes].[CSID] AS [CSID], 
+    [tblInfusionFaxReceivedFaxes].[ID] AS [ID], 
+    [tblInfusionFaxReceivedFaxes].[Pages] AS [Pages], 
+    [tblInfusionFaxReceivedFaxes].[RoutingInfo] AS [RoutingInfo], 
+    [tblInfusionFaxReceivedFaxes].[FaxSize] AS [FaxSize], 
+    [tblInfusionFaxReceivedFaxes].[TransmissionStart] AS [TransmissionStart], 
+    [tblInfusionFaxReceivedFaxes].[TransmissionEnd] AS [TransmissionEnd], 
+    [tblInfusionFaxReceivedFaxes].[TSID] AS [TSID], 
+    [tblInfusionFaxReceivedFaxes].[FileName] AS [FileName], 
+    [tblInfusionFaxReceivedFaxes].[CurrentFaxStatus] AS [CurrentFaxStatus], 
+    [tblInfusionFaxReceivedFaxes].[FileLocation] AS [FileLocation], 
+    [tblInfusionFaxReceivedFaxes].[ArchiveDate] AS [ArchiveDate], 
+    [tblInfusionFaxReceivedFaxes].[UpDatedBy] AS [UpDatedBy], 
+    [tblInfusionFaxReceivedFaxes].[UpDatedDate] AS [UpDatedDate]
+    FROM [dbo].[tblInfusionFaxReceivedFaxes] AS [tblInfusionFaxReceivedFaxes]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

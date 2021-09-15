@@ -1,0 +1,101 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Access Denied</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 12px 25px;
+            background-color: #343434;
+            color: #ddd;
+        }
+
+        p {
+            margin: 12px 25px;
+            text-align:center;
+            margin-top:100px;
+            margin-bottom:100px;
+        }
+
+        strong {
+            color: #E0042D;
+        }
+        .option{
+            float:left;
+            margin-left: 32%; 
+            height: 35px;
+            border-radius:5px; 
+            border:4px solid #343434;
+            text-align:center;
+            padding-top:20px;
+            padding-bottom:10px; 
+            width: 15%; 
+            box-shadow: 2px 2px 6px silver; 
+            background-color:rgb(52, 73, 94);
+            font-size: 20px;
+            color:white;
+            
+            cursor:pointer;
+        }
+        .option:hover{
+            transition: all .30s ease-in-out;
+            background-color:rgba(52, 73, 94,0.7);     
+            transform:scale(1.08);
+        }
+    </style>
+</head>
+<body>
+   
+    <h1 style=  "Text-Align:center;">Access Denied</h1>
+    <p>
+        <strong style="font-size:25px;">You are attempting to access a forbidden site.</strong><br /><br />
+        Consult your system administrator for details.
+    </p>
+    <div class="option" onclick= sendEmail("Y")>
+        Request Access
+    </div>
+    <div class="option"  onclick= sendEmail() style= "margin-left:5%; " id="MailToHelpDesk">
+        Report Problem
+    </div>
+    <img id="img" />
+    <script>
+        var u = "@ViewData["UserName"]"
+        
+        function sendEmail(toUse) {
+            var msg1 = "Hello, %0D%0A I would like to request Access to site " + window.location.href ;
+            var msg2 = "Hello,%0D%0A I am having an issue where I should have access to this site at " + window.location.href
+                + "<br> Please let me know. "
+            var Issue; 
+            var emailbody;
+            if (toUse == "Y") {
+                emailbody = msg1;
+                Issue = "Request Access";
+            } else {
+                emailbody = msg2;
+                Issue = "Issue Accessing Site";
+            }
+           
+            var getEmail = u + "%40ghvhs.org";
+            var getName = u.replace("GHVHS","");
+            var getMessage = emailbody;
+            getMessage = emailbody + "%0D%0A%0D%0A" +
+                                   "Thank You," + "%0D%0A" +
+                                   getName;
+            window.location = 'mailto:' + "helpmenow@ghvhs.org" + "?subject=" + Issue + "&body=" + getMessage;
+        }
+
+    </script>
+</body>
+</html>

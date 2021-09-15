@@ -1,0 +1,300 @@
+﻿@{
+    ViewData["Title"] = "Pnp Help";
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var userInfoJson = jss.Serialize(ViewBag.Meta);
+    var Nav = jss.Serialize(ViewBag.Nav);
+    string PnpMatainence = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainence");
+    string PnpMatainenceMessage = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainenceMessage");
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string PnpJS = "/Scripts/PnpUserAndMain.js?v=" + version;
+    string PnpCSS = "/Content/PnpUserAndMain.css?v=" + version;
+}
+<style>
+    .SingleTopicContainer{
+        width:80%;
+        height:50px;
+        float:left;
+        margin-left:10%;
+        transition:all .25s ease;
+        cursor:pointer;
+    }
+    .SelectedCointaier{
+         width:80%;
+        height:50px;
+        float:left;
+        margin-left:10%;
+        transition:all .25s ease;
+        cursor:pointer;
+    }
+    .SingleTopicContainer:hover{
+        background-color:silver;
+    }
+    .labelAndIconContainer{
+         width:100%;
+         height:50px;
+        float:left;
+        border-bottom:3px solid grey;
+    }
+    .labelAndIconContainerSelected{
+         width:100%;
+         height:100%;
+        float:left;
+        border-bottom:3px solid blue;
+    }
+    .LabelHelp{
+        width: auto;
+        height: 20%;
+        float:left;
+        font-size:25px;
+        color:black;
+        text-align:center;
+         transition:all .25s ease;
+        margin-top:1%;
+    }
+    .rotatingImg{
+        width:20px;
+        height:20px;
+        transition:all .25s ease;
+        float:left;
+        margin-top:10px;
+    }
+    .contentContainer{
+        width:100%;
+        height:0%;
+        display:none;
+        overflow-y:auto;
+        float:left;
+        background-color:white;
+        transition:all .25s ease;
+    }
+    .ContentTitle{
+        width:60%;
+        height:auto;
+        float:left;
+        text-align:center;
+        margin-left:20%;
+        margin-right:20%;
+        padding-top:10px;
+        font-size:22px;
+        border-bottom:2px solid silver;
+        margin-top:1%;
+        margin-bottom:1%;
+    }
+    .ContentImage{
+        height:auto;
+        width:auto;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        max-width:50%;
+         margin-top:1%;
+        margin-bottom:1%;
+    }
+    .ContentText{
+        width:60%;
+        height:auto;
+        float:left;
+        text-align:center;
+        margin-left:20%;
+        font-size:20px;
+        color:grey;
+         margin-top:1%;
+        margin-bottom:1%;
+    }
+    .HelpContainer{
+        width:80%;
+        margin-left:10%;
+        height:auto;
+        float:left;
+        background-color:white;
+        margin-top:2%;
+        box-shadow:2px 2px 6px silver;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+</style>
+<script type="text/javascript" src="@PnpJS"></script>
+<link rel="stylesheet" type="text/css" href="@PnpCSS">
+
+<script> 
+    var Meta = @Html.Raw(userInfoJson);
+    Pnp.SeperateMetaData(Meta);
+    Pnp.Navigation =  @Html.Raw(Nav);
+    Pnp.UserName = "@ViewData["UserName"]";
+    Elem = GHVHS.DOM.create({ "Type": "div", "Class": "Elem", "Id": "Elem", "Parent": document.getElementById("MainContent") });
+    Pnp.drawSideMenu("Help", Elem, "");
+    
+    Pnp.DrawTopBar(Pnp.UserName, Elem, "Help",  "");
+    var HelpContainer = GHVHS.DOM.create({ "Type": "div", "Class": "HelpContainer", "Id": "HelpContainer", "Parent": Elem });
+    var allThings = ["Search", "Uploading a Document", "Concurring", "Approving", "Dicussions", "Administrations"];
+    var content = [
+        {
+            "Type": "Search", "Content": [
+                { "Type": "Title", "Content": "Overview" },
+                { "Type": "div", "Content": "When Searching You will see key elements to help you on your Search. Search Box, Departments, Categories and Locations will help you when searching. You search by multiple values(One in each box) or just one. " },
+                { "Type": "img", "Content": "/img/searchHelp1.png" },
+                { "Type": "Title", "Content": "SearchBox" },
+                { "Type": "div", "Content": "When entering a value into the Search Box it will look at the Author, FileName, Contents of the Document, and Title to see if any matches " },
+                { "Type": "img", "Content": "/img/searchHelp2.png" },
+                { "Type": "Title", "Content": "Departments" },
+                { "Type": "img", "Content": "/img/searchHelp3.png" },
+                { "Type": "div", "Content": "The default value for departments when searching on the home page is My Departments. When '-' is selected only departments that you have access to via the administration page will be searched. Otherwise whatever value is put into the departments selector will be what is searched for." },
+                { "Type": "Title", "Content": "Categories and Location" },
+                { "Type": "img", "Content": "/img/searchHelp4.png" },
+                { "Type": "div", "Content": "Both of these work just as expected by selecting a value and the default value is '-' when set to this value it will not affect your search." },
+                { "Type": "Title", "Content": "Searching by Policy Type" },
+                { "Type": "div", "Content": "When on the homepage it will default to search just approved policies, if you wish to search archive or draft policies you will have to go to that page within the platform and search from that page's respected search box " },
+                { "Type": "img", "Content": "/img/searchHelp5.png" },
+                { "Type": "img", "Content": "/img/searchHelp6.png" },
+            ]
+        },
+        {
+            "Type": "Uploading a Document", "Content": [
+                  { "Type": "Title", "Content": "Overview" },
+                  { "Type": "div", "Content": "When uploading a document, you will have to go to the draft policies page in the platform and click on 'click here to upload a new policy'" },
+                  { "Type": "img", "Content": "/img/UploadingHelp1.png" },
+                  { "Type": "div", "Content": "To have your policy have it's policy Number injected into the document place {POLICY NUMBER} Some Where in the document. As shown below." },
+                  { "Type": "img", "Content": "/img/UploadingHelp2.png" },
+                  { "Type": "Title", "Content": "Starting Your Upload" },
+                  { "Type": "div", "Content": "When ready to upload, click on the button show above and you will be greeted with this slide up screen. Click on where is says to click and select your policy and click OK" },
+                  { "Type": "img", "Content": "/img/UploadingHelp3.png" },
+                  { "Type": "Title", "Content": "Finishing Your Upload" },
+                  { "Type": "div", "Content": "If the document was successfully uploaded a form will appear after. In which the policies meta data can be filled out. Click OK when finished to finish the upload " },
+                  { "Type": "img", "Content": "/img/UploadingHelp4.png" },
+                  { "Type": "Title", "Content": "Setting Up Concurrence and setting up Approving" },
+                  { "Type": "div", "Content": "Type in the Concurer's field the person(s) that you wish to add to the concurrence. Click on the name of that person and then click the green check mark to add that person" },
+                  { "Type": "img", "Content": "/img/UploadingHelp5.png" },
+                  { "Type": "img", "Content": "/img/UploadingHelp6.png" },
+                  { "Type": "img", "Content": "/img/UploadingHelp7.png" },
+                  { "Type": "Title", "Content": "Editing People in Concurrence on a policy" },
+                  { "Type": "div", "Content": "Adding a new person or deleting a new person from the concurrence list on a policy will delete all existing concurrence tasks. This will have new concurrence tasks be sent out and the old ones will be Delete FOR ALL PEOPLE In Concurrence on that policy. The same rule Applies to Aprrovers when that list is also updated." },
+                  { "Type": "Title", "Content": "Once Finished" },
+                  { "Type": "div", "Content": "One the Upload process is finished the uploader will get an email as confirmation." },
+                  { "Type": "img", "Content": "/img/UploadingHelp8.png" },
+
+             ]
+        },
+        {
+            "Type": "Concurring", "Content": [
+                 { "Type": "Title", "Content": "Overview" },
+                 { "Type": "div", "Content": "When a concurrence task is sent out each person will recieve a concurrence email. From which they will be able to view the policy or the concurence task.  " },
+                 { "Type": "img", "Content": "/img/cHelp1.png" },
+                 { "Type": "Title", "Content": "Viewing Concurrences" },
+                 { "Type": "div", "Content": "Click on the Concurrence button in the naviagtion menu, we can see our active and completed concurrences. " },
+                 { "Type": "img", "Content": "/img/cHelp2.png" },
+                 { "Type": "img", "Content": "/img/cHelp3.png" },
+                 { "Type": "Title", "Content": "Concuring" },
+                 { "Type": "div", "Content": "When Concurring a slide up screen will appear with the option to concur and also fill out some fields. From this screen we will have the option to save our work or concur. When on the draft policies page when can see the status on the concurrence and what each person put as a comment" },
+                 { "Type": "img", "Content": "/img/cHelp4.png" },
+                 { "Type": "div", "Content": "Upon Concurence completion a email will be sent out as a confirmation to all other concurrers that your concurrence is completed.  " },
+                  { "Type": "img", "Content": "/img/cHelp8.png" },
+                 { "Type": "Title", "Content": "Rejecting" },
+                 { "Type": "div", "Content": "Upon Rejecting a email will be sent out as a confirmation to all other concurrers that your concurrence is rejected. The Concurrence will stay in your active concurence page. If the initiator makes changes you will be able to change to approved. " },
+                 { "Type": "img", "Content": "/img/cHelp5.png" },
+                 { "Type": "img", "Content": "/img/cHelp6.png" },
+                 { "Type": "img", "Content": "/img/cHelp7.png" },
+            ]
+        },
+        {
+            "Type": "Approving", "Content": [
+                 { "Type": "Title", "Content": "Overview" },
+                 { "Type": "div", "Content": "Approval Tasks are only generated when a policies concurence's tasks are ALL Completed. There may be multiple approvers on a policy and an email will be sent out upon concurence being finished.  " },
+                 { "Type": "img", "Content": "/img/cHelp7.png" },
+                 { "Type": "div", "Content": "Click on the View Approvals tab on the concurrence page in the policy platform to view your active approvals that are assigned to you. " },
+                 { "Type": "img", "Content": "/img/ApprovingHelp1.png" },
+                 { "Type": "Title", "Content": "View Status" },
+                 { "Type": "div", "Content": "Click highlighted section below to see what the status is for all approvals for that policy" },
+                 { "Type": "img", "Content": "/img/ApprovingHelp2.png" },
+                 { "Type": "img", "Content": "/img/ApprovingHelp3.png" },
+                 { "Type": "Title", "Content": "Approving" },
+                 { "Type": "div", "Content": "When approving the policy (Screen Show Below), the policy won't be added to the Approved Policy Page Until the last approval is approved. If you see your Approval stil in your View Approval page, then someone else still has an approval task to approve." },
+                 { "Type": "img", "Content": "/img/ApprovingHelp4.png" },
+                 { "Type": "img", "Content": "/img/ApprovingHelp5.png" },
+                 { "Type": "div", "Content": "Rejecting will be available at any time durring the Aprroval process" },
+                 { "Type": "Title", "Content": "Rejecting" },
+                 { "Type": "div", "Content": "When Rejecting a Approval task, the task will stll stay in your View Approval page. You can change the task to approval when chnages to the policy are presented. " },
+                  { "Type": "img", "Content": "/img/ApprovingHelp6.png" },
+            ]
+        },
+        {
+            "Type": "Dicussions", "Content": [
+                { "Type": "Title", "Content": "Overview" },
+                { "Type": "div", "Content": "Once a Policy has it's concurrence set in the edit form, a policy discussion will be generated for all conncurrers and approvers" },
+                { "Type": "img", "Content": "/img/DisHelp1.png" },
+                { "Type": "Title", "Content": "Deleteing Conversations" },
+                { "Type": "div", "Content": "To delete a Coversation click on the chat bubble highlighted below and a drop down will apear with the option to delete the conversation." },
+                { "Type": "img", "Content": "/img/DisHelp2.png" },
+                { "Type": "Title", "Content": "Posting a message" },
+                { "Type": "div", "Content": "type in the message box (Shown Below) and click post to send message. a Email with be generated and sent out to all people in the conversation." },
+                { "Type": "img", "Content": "/img/DisHelp3.png" },
+                { "Type": "img", "Content": "/img/DisHelp4.png" },
+                { "Type": "Title", "Content": "Editing And Deleteing Messages" },
+                { "Type": "div", "Content": "Next to each message is a chat bubble (highlighted below) when clicked a drop down will appear to edit or delete the message." },
+                { "Type": "img", "Content": "/img/DisHelp5.png" },
+                { "Type": "img", "Content": "/img/DisHelp6.png" },
+            ]
+        },
+        { "Type": "Administrations", "Content": [] }
+
+    ];
+
+
+
+
+
+    for (var i = 0; i < allThings.length; i++){
+        var SingleTopicContainer = GHVHS.DOM.create({ "Type": "div", "Class": "SingleTopicContainer", "Id": "SingleTopicContainer", "Parent": HelpContainer });
+        var labelAndIconContainer = GHVHS.DOM.create({ "Type": "div", "Class": "labelAndIconContainer", "Id": "labelAndIconContainer", "Parent": SingleTopicContainer });
+        var LabelHelp = GHVHS.DOM.create({ "Type": "div", "Class": "LabelHelp", "Id": "Label", "Content": allThings[i], "Parent": labelAndIconContainer });
+        var rotatingImg = GHVHS.DOM.create({ "Type": "img", "Src": "/img/blackDrop.png", "Class": "rotatingImg", "Id": "Label", "Parent": labelAndIconContainer });
+        var contentContainer = GHVHS.DOM.create({ "Type": "div", "Class": "contentContainer", "Id": "contentContainer", "Parent": SingleTopicContainer });
+        if (content[i].Content.length) {
+            for (var j = 0; j < content[i].Content.length; j++) {
+                if (content[i].Content[j].Type == "Title") {
+                    var ContentTitle = GHVHS.DOM.create({ "Type": "div", "Class": "ContentTitle", "Id": "ContentTitle", "Parent": contentContainer });
+                    ContentTitle.innerHTML = content[i].Content[j].Content;
+                } else if (content[i].Content[j].Type == "img") {
+                    var ContentImage = GHVHS.DOM.create({ "Type": "img", "Class": "ContentImage", "Id": "ContentImage", "Parent": contentContainer });
+                    ContentImage.src = content[i].Content[j].Content;
+                } else {
+                    var ContentText = GHVHS.DOM.create({ "Type": "div", "Class": "ContentText", "Id": "ContentText", "Parent": contentContainer });
+                    ContentText.innerHTML = content[i].Content[j].Content;
+                }
+            }
+        }
+        
+        SingleTopicContainer.onclick = function () {
+            if (this.style.height != "750px") {
+                this.style.height = "750px";
+                this.querySelector(".contentContainer").style.height = "80%";
+                this.querySelector(".contentContainer").style.display = "block";
+                this.querySelector(".rotatingImg").style.transform = "rotate(180deg)";
+                var label = this.querySelector(".LabelHelp");
+                var labelContainer = this.querySelector(".labelAndIconContainer");
+                label.style.width = "48%";
+                label.style.color = "black";
+                label.style.textAlign = "right";
+                this.className = "SelectedCointaier";
+                labelContainer.style.backgroundColor = "white";
+                labelContainer.style.boxShadow = "2px 2px 6px grey";
+            } else {
+                this.style.height = "50px";
+                this.querySelector(".contentContainer").style.height = "0px";
+                this.querySelector(".contentContainer").style.display = "none";
+                this.querySelector(".rotatingImg").style.transform = "rotate(0deg)";
+                var label = this.querySelector(".LabelHelp");
+                var labelContainer = this.querySelector(".labelAndIconContainer");
+                label.style.width = "auto";
+                label.style.color = "grey";
+                label.style.textAlign = "center";
+                this.className = "SingleTopicContainer";
+                labelContainer.style.backgroundColor = "unset";
+                labelContainer.style.boxShadow = "unset";
+            }
+        }
+
+    }
+    setTimeout(function () {
+        document.getElementById("Footer").style.display = "none";
+    },400)
+</script>

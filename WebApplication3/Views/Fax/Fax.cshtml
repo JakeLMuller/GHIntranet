@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Fax";
+}
+    <script type="text/javascript" src="~/Scripts/fax.js"></script>
+    <div id="mainhide">
+        <div class="hide" id="js">@ViewData["Json"]</div>
+        <div class="hide" id="debug">@ViewData["debug"]</div>
+        <div class="hide" id="Tabs">@ViewData["Tabs"]</div>
+        <div class="hide" id="HeaderTitle">@ViewData["HeaderTitle"]</div>
+        <div class="hide" id="ptJson">@ViewData["ptJson"]</div>
+        <div class="hide" id="headerNames">@ViewData["headerNames"]</div>
+        <div class="hide" id="RowNames">@ViewData["RowNames"]</div>
+        <div class="hide" id="FaxTypes">@ViewData["FaxTypes"]</div>
+    </div>
+    
+   <script>
+       document.getElementById("MainContent").style.marginBottom = "1%";
+       if (document.getElementById("HeaderTitle").innerHTML == "All Faxes") {
+           Fax.ParseAllFax(document.getElementById("js").innerHTML, document.getElementById("HeaderTitle").innerHTML,"@ViewData["ViewOnly"]");
+       } else {
+           var tempDate = "@ViewData["NewOrGet"]";
+           if (tempDate == "Y") {
+               Fax.DrawNewFax(document.getElementById("js").innerHTML, document.getElementById("HeaderTitle").innerHTML, "@ViewData["rout"]", "@ViewData["edit"]", document.getElementById("ptJson").innerHTML, "@ViewData["route"]", document.getElementById("FaxTypes").innerHTML,"@ViewData["ViewOnly"]");
+           }else{
+               Fax.DrawAllFax(document.getElementById("js").innerHTML, document.getElementById("Tabs").innerHTML, document.getElementById("HeaderTitle").innerHTML, "@ViewData["rout"]", "@ViewData["page"]",
+                   document.getElementById("headerNames").innerHTML, document.getElementById("RowNames").innerHTML, "@ViewData["path"]","@ViewData["route"]","@ViewData["ViewOnly"]");
+           }
+       }
+       var getHides = document.getElementById("mainhide");
+       while (getHides.firstChild) {
+           getHides.removeChild(getHides.firstChild);
+       }
+       getHides.parentElement.removeChild(getHides);
+
+       var tobring = setTimeout(function () {
+
+           document.getElementById("Footer").style.marginTop = "1%";
+       }, 100);
+   </script>
+
+

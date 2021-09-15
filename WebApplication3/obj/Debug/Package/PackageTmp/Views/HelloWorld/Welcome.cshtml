@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Welcome</h2>
+
+
+    @for (int i = 0; i < (int)ViewData["NumTimes"]; i++)
+    {
+         <div class="boxDemo">
+             <img class="boxDemoImg" src="~/img/testicon.png"/>
+            <div class="boxDemoMsg">@ViewData["Message"]</div>     
+         </div>
+        
+    }

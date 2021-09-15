@@ -1,0 +1,18 @@
+﻿@{
+    
+}
+
+
+<script type="text/javascript" src="~/Scripts/PnpUserAndMain.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/PnpUserAndMain.css">
+
+<script>
+    Pnp.logInUser("@ViewData["redirect"]");
+
+    document.getElementById("canvas2").onkeydown = function(event) {
+        var x = event.keyCode;
+        if (x == 13) {  // 27 is the ESC key
+            document.getElementById("SearchButtonSmall").click();
+        }
+    }
+</script>

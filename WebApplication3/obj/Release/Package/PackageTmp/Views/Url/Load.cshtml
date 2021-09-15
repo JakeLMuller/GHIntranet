@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div id="OutPut">
+    
+    </div>
+    <script>
+        var isURL = "@ViewData["result"]";
+        if (isURL != "Not yet Created" && isURL.indexOf("Error") < 0) {
+            window.location.href = isURL;
+        } else {
+            var output = document.getElementById("OutPut");
+            output.innerHTML = "Error: " + isURL + "<br>" + "URL: " + "@ViewData["url"]"  + "<br> ID: " + "@ViewData["id"]" +"<br> AltName: "+"@ViewData["AltName"]";
+
+        }
+    </script>
+</body>
+
+</html>

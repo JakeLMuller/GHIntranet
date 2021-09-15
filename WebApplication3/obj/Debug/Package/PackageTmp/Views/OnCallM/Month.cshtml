@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var dt = jss.Serialize(ViewBag.Data);
+    var gp = jss.Serialize(ViewBag.Groups);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="~/Scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/main.css">
+    <script type="text/javascript" src="~/Scripts/OnCallM.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/OnCallM.css">
+    <title>OnCallMobile</title>
+</head>
+
+<body>
+    <div id="App"></div>
+    <script>
+        var Groups = @Html.Raw(gp);
+        var Data = @Html.Raw(dt);
+        OnCall.DrawMonth(Groups, Data, "@ViewData["AmountOfDays"]", "@ViewData["Month"]", "@ViewData["Year"]","@ViewData["Entity"]", "@ViewData["Department"]" );
+    </script>
+</body>
+</html>

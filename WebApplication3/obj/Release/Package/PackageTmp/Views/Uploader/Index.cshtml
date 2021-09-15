@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "View Uploads - GHVHS";
+}
+
+<script type="text/javascript" src="~/Scripts/Uploads.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/Uploader.css">
+
+<script>
+    var j= "@ViewData["json"]";
+    Uploader.Display(j);
+    var tobring = setTimeout(function () {
+
+        document.getElementById("Footer").style.marginTop = "0%";
+    }, 100);
+</script>
+

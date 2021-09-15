@@ -1,0 +1,42 @@
+﻿@{
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var userInfoJson = jss.Serialize(ViewBag.AllFiles);
+    var Nav = jss.Serialize(ViewBag.Nav);
+    string PnpMatainence = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainence");
+    string PnpMatainenceMessage = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainenceMessage");
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string PnpJS = "/Scripts/PnpUserAndMain.js?v=" + version;
+    string PnpCSS = "/Content/PnpUserAndMain.css?v=" + version;
+    string ConvoJS = "/Scripts/PnpConvos.js?v=" + version;
+    string ConvoCSS = "/Content/PnpConvo.css?v=" + version;
+}
+<script type="text/javascript" src="@PnpJS"></script>
+<script type="text/javascript" src="@ConvoJS"></script>
+<link rel="stylesheet" type="text/css" href="@PnpCSS">
+<link rel="stylesheet" type="text/css" href="@ConvoCSS">
+<script>
+    var UnderMaintenance = "@PnpMatainence";
+    if (UnderMaintenance == "N"){
+        Pnp.Navigation =  @Html.Raw(Nav);
+        var AllFiles = @Html.Raw(userInfoJson);
+        var check = "@ViewData["Id"]";
+        if (check != ""){
+            PnpConvos.SingleConvo("@ViewData["UserName"]", "@ViewData["fullName"]", AllFiles,"@ViewData["Id"]","@ViewData["SubId"]","@ViewData["orderBy"]", "@ViewData["Search"]"  );
+        }else{
+            PnpConvos.AllConvos("@ViewData["UserName"]", "@ViewData["fullName"]", AllFiles,"@ViewData["Id"]","@ViewData["SubId"]","@ViewData["orderBy"]", "@ViewData["Search"]", "@ViewData["userDepartment"]");
+        }
+        if (document.getElementById("canvas").offsetWidth < 1500) {
+            setTimeout(function(){
+                document.getElementById("header").className = "hide";
+                document.getElementById("Footer").className = "hide";
+                document.getElementById("CCBody").style.height = "75%";
+                document.getElementById("BackButton").style.display = "none";
+                document.getElementById("MainContent").style.marginTop = "5px";
+                document.getElementById("menu").style.display = "none";
+
+            }, 400);
+        }
+    }else{
+        Pnp.drawMantainenceForPnp(document.getElementById("MainContent"), "@PnpMatainenceMessage")
+    }
+</script>

@@ -1,0 +1,152 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to the GHVHS Intranet</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <script src="http://ghinfo/includes/javascript/w3.js"></script>
+        <script src="http://ghinfo/includes/javascript/intranet_all_js.js"></script>
+        <script type="text/javascript" src="~/Scripts/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="~/Content/main.css">
+        <link rel="stylesheet" type="text/css" href="http://ghinfo/includes/css/intranet_all_css.css" />
+        <style>
+            audio {
+                width: 100%;
+                height: 80px;
+                display:block;
+                float:left;
+            }
+            audio:focus{
+                border:none;
+                outline:none;
+            }
+             .whiteX{
+                height:40px; 
+                width: 40px;
+                Top: 20px; 
+                position:absolute; 
+                right: 50px;
+                cursor:pointer;
+               transition: all .25s ease-in-out;
+            }
+            .whiteX:hover{
+                padding:0.2%;
+                border:1px solid white;
+                transform:scale(1.1);
+                background-color:rgb(0, 102, 153); 
+                border-radius:50%;
+            }
+            .Title2{
+                float: left;
+                height: 30px;
+                text-align: center;
+                padding-top: 0.5%;
+                padding-bottom: 0.5%;
+                font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+                border-radius: 10px;
+                box-shadow: 2px 2px 6px silver;
+                font-weight: bold;
+                font-size: 170%;
+                text-decoration: none;
+                color: rgb(0, 102, 153);
+                background-color: rgb(245, 245, 245);
+                width: 40%;
+                margin-left: 30%;
+                margin-bottom: 0.5%;
+            }
+            .canvas2 {
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+                z-index: 2000;
+                width: 100%;
+                height: 100%;
+                overflow-y: hidden;
+                overflow-x: hidden;
+                background: rgba(0, 0, 0, 0.9) none repeat scroll 0% 0%;
+            }
+            .FilesWidget {
+                float: left;
+                height: auto;
+                min-height: 15%;
+                width: 70%;
+                max-height: 500px;
+                border-radius: 10px;
+                border: 1px solid #dddddd;
+                margin-top: 0.5%;
+                margin-bottom: 0.5%;
+                background-color: white;
+                margin-left: 15%;
+                box-shadow:2px 2px 6px silver;
+            }
+            .FilesBody {
+                float: left;
+                height: 80%;
+                max-height: 470px;
+                overflow: auto;
+                border-top: none;
+                width: 100%;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body id="canvas">
+        <div class="ghvhs_header" w3-include-html="http://ghinfo/includes/html/intranet_header.html">
+
+        </div>
+
+
+        <div id="top_menu" w3-include-html="http://ghinfo/includes/html/intranet_top_menu.html">
+
+        </div>
+
+        <div class="ghvhs_left_menu" w3-include-html="http://ghinfo/includes/html/intranet_left_menu.html?v=2">
+
+        </div>
+
+        <script>
+            window.onload = function () {
+                w3.includeHTML();
+
+            }; 
+            GHVHS.DOM.getAudioFiles();
+            window.onresize = function () {
+                if (document.getElementById("canvas").offsetWidth < 1300) {
+                    document.getElementById("FileElem").style.width = "60%";
+                    document.getElementById("Titlel").style.fontSize = "100%";
+                    
+                } else {
+                    document.getElementById("FileElem").style.width = "80%";
+                    document.getElementById("Titlel").style.fontSize = "170%";
+                }
+            }
+            setTimeout(function () {
+                var TopMenulinks = document.getElementById("top_menu").querySelectorAll("a");
+                var SideMenuLinks = document.querySelector(".ghvhs_left_menu").querySelectorAll("a");
+                var container = [TopMenulinks, SideMenuLinks];
+                for (var i = 0; i < container.length; i++) {
+                    var links = container[i];
+                    for (var j = 0; j < links.length; j++) {
+                        var theLink = links[j].href.replace("sqldev", "ghinfo");
+                        links[j].href = theLink;
+                    }
+                }
+                if (document.getElementById("canvas").offsetWidth < 1300) {
+                    document.getElementById("FileElem").style.width = "60%";
+                    document.getElementById("Titlel").style.fontSize = "100%";
+
+                }
+            }, 300);
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,270 @@
+﻿body {
+}
+.OnCallContainer{
+    height:100%;
+    width:100%;
+    float:left;
+    margin-top:-1.15%;
+
+}
+.TopBar{
+    height:8%; 
+    width:100%;
+    float:left;
+    background-color:rgba(64, 0, 23,0.8);
+}
+.WelUser{
+    height:20%;
+    padding-top:1.5%;
+    padding-left:3%;
+    font-size:110%; 
+    width:15%;
+    color:white;
+    float:left;
+  
+}
+.TOnCall{
+    height:20%;
+    padding-top:0.8%;
+    padding-left:3%;
+    font-size:200%; 
+    width:30%;
+    color:white;
+    text-align:right;
+    float:left;
+}
+.ViewContainer{
+    height:100%;
+    width:44%;
+    float:left;
+}
+.FillerView{
+     height:20%;
+    padding-top:3%;
+    padding-left:3%;
+    float:left;
+    width:45%;
+}
+.SingleViewContainer{
+    height:20%;
+    padding-top:3%;
+    cursor:pointer;
+    padding-bottom:3.5%;
+    padding-left:3%;
+    font-size:120%; 
+    text-align:center;
+    width:20%;
+    color:white;
+    float:left;
+}
+.SingleViewContainer:hover{
+    background-color:white;
+    color:rgba(64, 0, 23,0.8);
+}
+.RightContainer{
+    height:100%;
+    width:30%;
+    float:left;
+    background-color:rgba(64, 0, 23,0.8);
+}
+.filterContainer{
+    width:100%;
+    height:5%;
+    float:left;
+}
+.DepartmentButton{
+    height: 45%;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+    width: 91%;
+    margin-left: 2%;
+    border: 2px solid rgb(64, 0, 23);
+    background-color: silver;
+    color: white;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px 5px #444;
+    float: left;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+.DepartmentButton:hover{
+    transition: all .30s ease-in-out;    
+    background-color: #5DADE2;
+   
+}
+.CallComments{
+     width:98%;
+    height:25%;
+    float:left;
+    margin-top:15%;
+}
+.CallTableHeader{
+    width:100%;
+    min-height:15%;
+    height:auto;
+    max-height:30%;
+    padding-top:0.5%;
+    padding-left:1.1%;
+    font-size:120%;
+    border: 2px solid rgb(64, 0, 23);
+    background-color: silver;
+    color: white;
+    text-align: center;
+    float:left;
+}
+.CallTableBody{
+     width:100%;
+    height:90%;
+    padding-top:1%;
+    padding-left:1%;
+    border: 2px solid silver;
+    background-color: white;
+    color: grey;
+    text-align: left;
+    float:left;
+    overflow-y:auto;
+}
+.LeftContainer{
+    height:100%;
+    width:70%;
+    float:left;
+    text-shadow:0.5px 0.5px 0.5px grey;
+}
+.dateContainer{
+    height: 4%;
+    width: 96%;
+    margin-top:0.5%;
+    margin-left:1%;
+    border:1px solid rgb(64, 0, 23);
+    background-color:silver;
+    float:left;
+    border-bottom:none;
+
+}
+.dateTimeContainer{
+    width:40%;
+    height:100%;
+    float:left;
+}
+.dateElement{
+    padding-top:0.8%;
+    padding-bottom:2%;
+    width:auto;
+    margin-left:36%;
+    height:10%;
+    float:left;
+    text-align:center;
+    color:white;
+    text-shadow:0.5px 0.5px 1px grey;
+    font-size:120%;
+}
+.calander{
+    height:100%;
+    width:auto;
+    margin-left:2%;
+    max-width:20%;
+    float:left;
+    cursor:pointer;
+}
+.calander:hover{
+    transform:scale(1.1);
+}
+.leftDateArrow{
+    float:left;
+    height:120%;
+    width:auto;
+    margin-top:-0.3%;
+    max-width:20%;
+    transform:rotate(90deg);
+    margin-left:25%;
+}
+.leftDateArrow:hover{
+     float:left;
+    height:140%;
+    width:auto;
+    margin-top:-0.6%;
+    max-width:20%;
+    transform:rotate(90deg);
+    margin-left:24.5%;
+}
+.rightDateArrow{
+    float:left;
+    height:120%;
+    width:auto;
+    max-width:20%;
+     margin-top:-0.3%;
+    transform:rotate(-90deg);
+}
+.rightDateArrow:hover {
+    float: left;
+    height: 140%;
+    width: auto;
+    margin-top: -0.6%;
+    max-width: 20%;
+    transform: rotate(-90deg);
+}
+.TimesCol{
+    height:86.9%;
+    margin-bottom:2%;
+    border-left:1px solid rgb(64, 0, 23);
+    padding-top:1%;
+    padding-bottom:1%;
+    margin-left:1%;
+    width:6%;
+    float:left;
+    background-color:silver;
+     border-bottom:1px solid rgb(64, 0, 23);
+}
+.SingleTime{
+    padding-top:1.5%;
+    height:3.9%;
+    
+    text-align:center;
+    width:100%;
+    float:left;
+    font-size:120%;
+    border-bottom:1px solid white;
+}
+.Schedules{
+    height:86.9%;
+    margin-bottom:2%;
+    padding-top:1%;
+     padding-bottom:1%;
+    width:90%;
+    float:left;
+    border-right:1px solid rgb(64, 0, 23);
+    border-bottom:1px solid rgb(64, 0, 23);
+}
+.SingleLine{
+    height:4.05%;
+    text-align:center;
+    width:100%;
+    float:left;
+    border-bottom:1px solid silver;
+}
+.call{
+    position:absolute; 
+    border:3px solid rgb(0, 102, 153);
+    border-radius:10px;
+    background-color:#5DADE2;
+    box-shadow: 2px 2px 6px grey;
+}
+.callInfo{
+    width: 95%;
+    margin-left:5%;
+    margin-top:2%;
+    height:50%;
+    color:white;
+    text-align:center;
+}
+.callInfoComment{
+    width: 95%;
+    margin-left:5%;
+    margin-top:0.5%;
+    height:45%;
+    color:white;
+    text-align:center; 
+}

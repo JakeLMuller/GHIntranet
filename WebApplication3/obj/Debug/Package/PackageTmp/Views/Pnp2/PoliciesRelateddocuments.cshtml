@@ -1,0 +1,10 @@
+﻿@{
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var AllFilesJson = jss.Serialize(ViewBag.AllFiles);
+}
+<script type="text/javascript" src="~/Scripts/PnpUserAndMain.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/PnpUserAndMain.css">
+<script>
+    var AllFiles = @Html.Raw(AllFilesJson);
+    Pnp.PoliciesRelateddocuments("@ViewData["UserName"]","@ViewData["fullName"]",AllFiles, "@ViewData["Id"]");
+</script>

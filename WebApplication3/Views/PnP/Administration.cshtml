@@ -1,0 +1,51 @@
+﻿@{
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var roles = jss.Serialize(ViewBag.roles);
+    var Departments = jss.Serialize(ViewBag.Departments);
+    var Nav = jss.Serialize(ViewBag.Nav);
+    var userInfoJson = jss.Serialize(ViewBag.Meta);
+    ViewData["Title"] = "Administration";
+    string PnpMatainence = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainence");
+    string PnpMatainenceMessage = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainenceMessage");
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string PnpJS = "/Scripts/PnpUserAndMain.js?v=" + version;
+    string PnpCSS = "/Content/PnpUserAndMain.css?v=" + version;
+    string AdminCss = "/Content/PnpAdministration.css?v=" + version;
+    string AdminJS = "/Scripts/PnpAdministration.js?v=" + version;
+
+}
+<script type="text/javascript" src="@PnpJS"></script>
+<link rel="stylesheet" type="text/css" href="@PnpCSS">
+
+<script type="text/javascript" src="@PnpJS"></script>
+<script type="text/javascript" src="@AdminJS"></script>
+<link rel="stylesheet" type="text/css" href="@PnpCSS">
+<link rel="stylesheet" type="text/css" href="@AdminCss">
+
+<script>
+    var UnderMaintenance = "@PnpMatainence";
+    if (UnderMaintenance == "N"){
+        var Meta = @Html.Raw(userInfoJson);
+        Pnp.SeperateMetaData(Meta);
+        Pnp.Navigation =  @Html.Raw(Nav);
+        Admin.UrlDepartment = "@ViewData["DepartmentURL"]";
+        var Roles = @Html.Raw(roles);
+        var Departments = @Html.Raw(Departments);
+        var AdminType = "@ViewData["AdminType"]";
+        if (AdminType == "Department"){
+            Admin.drawDeparmentAdminPage(Departments, Roles, "@ViewData["username"]", "Department Administration", "@ViewData["userDepartment"]");
+        }else if (AdminType == "User"){
+            Admin.drawUserAdminPage(Departments, Roles, "@ViewData["username"]", AdminType+" Administration", "@ViewData["userDepartment"]");
+        }else if (AdminType == "Role"){
+            Admin.drawRoleAdminPage(Departments, Roles, "@ViewData["username"]", AdminType+" Administration", "@ViewData["userDepartment"]");
+        }else if (AdminType == "Transfer"){
+            Pnp.drawMantainenceForPnp(document.getElementById("MainContent"), "This Page is currently down for maintenance");
+            //Admin.drawTransferAdminPage(Departments, Roles, "@ViewData["username"]", AdminType+" Administration", "@ViewData["userDepartment"]");
+        }
+        if (!AdminType){
+            window.location.href = window.location.href ;
+        }
+    }else{
+        Pnp.drawMantainenceForPnp(document.getElementById("MainContent"), "@PnpMatainenceMessage")
+    }
+</script>

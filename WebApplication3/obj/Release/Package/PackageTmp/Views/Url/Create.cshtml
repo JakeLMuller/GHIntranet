@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <script type="text/javascript" src="~/Scripts/main.js"></script>
+</head>
+<body>
+    <div>
+    
+    </div>
+    <div id="OutPut">
+
+    </div>
+    <script>
+        var isURL = "@ViewData["result"]";
+        var AltName = "@ViewData["AltName"]";
+        if (isURL != "Already Created or one of the Following is Already Is use:" && isURL.indexOf("Error") < 0) {
+            var output = document.getElementById("OutPut");
+            output.innerHTML = "TinyURL: ";
+            var getStartURL = window.location.href.split("/Url");
+            var addDiv = GHVHS.DOM.create({ "Type": "a", "Content": getStartURL[0] + "/URL/Load/" + "@ViewData["id"]", "Parent": output });
+            addDiv.href = "/Url/Load/" + "@ViewData["id"]";
+            if (AltName) {
+                output.innerHTML += "<br> AltTinyURL: ";
+                var addDiv2 = GHVHS.DOM.create({ "Type": "a", "Content": getStartURL[0] + "/URL/Load/" + AltName, "Parent": output });
+                addDiv2.href = "/Url/Load/" + "@ViewData["AltName"]";
+            }
+        } else {
+            var output = document.getElementById("OutPut");
+            output.innerHTML = "Error: " + isURL + "<br>" + "URL: " + "@ViewData["url"]"  + "<br> ID: " + "@ViewData["id"]" +"<br> AltName: "+"@ViewData["AltName"]";
+
+        }
+    </script>
+</body>
+</html>

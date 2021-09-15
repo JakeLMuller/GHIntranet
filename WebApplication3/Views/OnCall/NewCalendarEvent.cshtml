@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Daily On-Call";
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var Times = jss.Serialize(ViewBag.Times);
+    var gp = jss.Serialize(ViewBag.Groups);
+    var SelectedGroup = jss.Serialize(ViewBag.selectedGroup);
+    var PeopleInGroup = jss.Serialize(ViewBag.People);
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string OnCallJS = "/Scripts/OnCall.js?v=" + version;
+    string OnCallCss = "/Content/OnCall.css?v=" + version;
+}
+
+<script type="text/javascript" src="@OnCallJS"></script>
+<link rel="stylesheet" type="text/css" href="@OnCallCss">
+
+<script>
+    var Groups = @Html.Raw(gp);
+    var DefaultTimes = @Html.Raw(Times);
+    var Group = @Html.Raw(SelectedGroup);
+    var People = @Html.Raw(PeopleInGroup);
+
+    OnCallDeskTop.DrawNewEditView("@ViewData["UserName"]",  "@ViewData["id"]", "@ViewData["today"]","@ViewData["startWeek"]",
+        "@ViewData["endWeek"]", Group, Groups, DefaultTimes, People);
+</script>

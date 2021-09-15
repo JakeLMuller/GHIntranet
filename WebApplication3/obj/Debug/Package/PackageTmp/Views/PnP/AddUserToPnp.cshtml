@@ -1,0 +1,19 @@
+﻿@{
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string PnpJS = "/Scripts/PnpUserAndMain.js?v=" + version;
+    string PnpCSS = "/Content/PnpUserAndMain.css?v=" + version;
+}
+
+<script type="text/javascript" src="@PnpJS"></script>
+<link rel="stylesheet" type="text/css" href="@PnpCSS">
+
+
+<script>
+    var getElem = document.getElementById("MainContent");
+    ContainerForAddingUsers = GHVHS.DOM.create({ "Type": "div", "Class": "ContainerForAddingUsers", "Id": "ContainerForAddingUsers", "Parent": getElem });
+
+    InputFieldContainer = GHVHS.DOM.create({ "Type": "div", "Class": "InputFieldContainer", "Id": "InputFieldContainer", "Parent": InputFieldContainer });
+    LabelForInput = GHVHS.DOM.create({ "Type": "div", "Class": "InputFieldContainer", "Id": "InputFieldContainer", "Parent": InputFieldContainer });
+    InputForInput = GHVHS.DOM.create({ "Type": "div", "Class": "InputFieldContainer", "Id": "InputFieldContainer", "Parent": InputFieldContainer });
+
+</script>

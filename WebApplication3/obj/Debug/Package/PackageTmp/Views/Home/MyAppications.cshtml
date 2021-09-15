@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "My Apps";
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var Apps = jss.Serialize(ViewBag.Apps);
+}
+
+<script>
+    
+    var MyApps = @Html.Raw(Apps);
+    console.log(MyApps);
+    GHVHS.DOM.DrawMyApps(MyApps);
+    
+</script>

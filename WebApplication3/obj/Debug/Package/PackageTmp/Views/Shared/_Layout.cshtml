@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     @{ 
+         string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+         string mainJS = "/Scripts/main.js?v="+ version;
+         string mainCSS = "/Content/main.css?v=" + version;
+         string uploderJs = "/Content/Uploader.css?v=" + version;
+    }
+    <link rel="icon" href="@Url.Content("~/img/FavIcon.png")" />
+    <title>@ViewBag.Title - Garnet Health</title>
+
+    <script type="text/javascript" src="@mainJS"></script>
+    <link rel="stylesheet" type="text/css" href="@mainCSS">
+    <link rel="stylesheet" type="text/css" href="@uploderJs">
+    
+</head>
+<body>
+  
+
+    <div id="canvas" class="canvas">
+        <script type="text/javascript">
+            var homePage = "";
+            GHVHS.DOM.Header();
+            
+        </script>
+        <div class="MainContent" id="MainContent">
+            @RenderBody()
+            
+            
+        </div>
+        
+
+
+    </div>
+
+    <script>
+        var getmain = document.getElementById("MainContent");
+        var getHeader = document.getElementById("header");
+        if (document.getElementById("canvas").offsetWidth < 950) {
+            getHeader.style.height = "16%";
+        }
+        getmain.style.marginTop =(getHeader.offsetHeight+20) + "px";
+        if (homePage != "Y") {
+            GHVHS.DOM.DrawFooter();
+            document.getElementById("Footer").style.marginTop = "1.5%";
+        }
+        var getHeaderNav = document.getElementById('headerPartOne');
+        var navs = getHeaderNav.querySelectorAll(".NavItem");
+        if (document.getElementById("canvas").offsetWidth < 1400) {
+            for(var i = 0; i < navs.length; i++) {
+                navs[i].style.fontSize = "14px";
+                navs[i].style.backgroundImage = "url()";
+                navs[i].style.height = (document.getElementById('headerPartOne').offsetHeight - 25)+ "px";
+            }
+        }
+        
+        document.getElementById("MainContent").onmouseover = function () {
+            var getHeaderNav = document.getElementById('headerPartOne');
+            var navs = getHeaderNav.querySelectorAll(".NavItem");
+            for (var i = 0; i < navs.length; i++) {
+                if (navs[i].style.backgroundColor == "rgb(92, 10, 58)") {
+                    if (navs[i].id != "div||1") {
+                        navs[i].click();
+                    } else {
+                        navs[i].style.backgroundColor = "white";
+                        navs[i].style.color = "#5c0a3a";
+                    }
+                }
+
+            }
+        }
+        window.onresize = function () {
+            window.location.href = window.location.href;
+        }
+        GHVHS.DOM.handleScrollMain();
+    </script>      
+
+    
+
+    
+
+   
+    @RenderSection("scripts", required: false)
+</body>
+</html>

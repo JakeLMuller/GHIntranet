@@ -1,0 +1,69 @@
+﻿@{
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var userInfoJson = jss.Serialize(ViewBag.AllFiles);
+    var Nav = jss.Serialize(ViewBag.Nav);
+    var meta = jss.Serialize(ViewBag.Meta);
+    ViewData["Title"] = "Pnp Search";
+    string PnpMatainence = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainence");
+    string PnpMatainenceMessage = System.Configuration.ConfigurationSettings.AppSettings.Get("PnpMatainenceMessage");
+
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string mainJS = "/Scripts/main.js?v=" + version;
+    string mainCSS = "/Content/main.css?v=" + version;
+    string uploderJs = "/Content/Uploader.css?v=" + version;
+    string PnpJS = "/Scripts/PnpUserAndMain.js?v=" + version;
+    string PnpCSS = "/Content/PnpUserAndMain.css?v=" + version;
+
+    if (String.IsNullOrEmpty(ViewBag.SearchBy) == false)
+    {
+        Layout = null;
+        <script type="text/javascript" src="@mainJS"></script>
+        <link rel="stylesheet" type="text/css" href="@mainCSS">
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>@ViewBag.Title - GHVHS</title>
+            <script type="text/javascript" src="@mainJS"></script>
+            <link rel="stylesheet" type="text/css" href="@mainCSS">
+            <link rel="stylesheet" type="text/css" href="@uploderJs">
+            
+        </head>
+        <body>
+            <div style="display:none;">@ViewBag.Error</div>
+            <div id="canvas" class="canvas">
+                <div class="MainContent" id="MainContent">
+                   
+                </div>
+            </div>
+        </body>
+    </html>
+
+
+        }
+    }
+
+
+    <script type="text/javascript" src="@PnpJS"></script>
+    <link rel="stylesheet" type="text/css" href="@PnpCSS">
+   
+            <script>
+                var UnderMaintenance = "@PnpMatainence";
+                if (UnderMaintenance == "N"){
+                    var Meta = @Html.Raw(meta);
+                    Pnp.SeperateMetaData(Meta);
+                    Pnp.Navigation =  @Html.Raw(Nav);
+                    var AllFiles = @Html.Raw(userInfoJson);
+                    Pnp.Home("@ViewData["UserName"]", AllFiles, "@ViewData["SearchBy"]", "@ViewData["SearchValue"]", "@ViewData["Id"]");
+
+                    document.getElementById("Elem").onkeydown = function(event) {
+                        var x = event.keyCode;
+                        if (x == 13) {  // 27 is the ESC key
+                            document.getElementById("SearchButton").click();
+                        }
+                    }
+                }else{
+                    Pnp.drawMantainenceForPnp(document.getElementById("MainContent"), "@PnpMatainenceMessage")
+                }
+            </script>

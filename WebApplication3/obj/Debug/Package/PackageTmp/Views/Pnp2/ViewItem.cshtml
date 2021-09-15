@@ -1,0 +1,24 @@
+﻿@{
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var userInfoJson = jss.Serialize(ViewBag.AllFiles);
+}
+<script type="text/javascript" src="~/Scripts/PnpUserAndMain.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/PnpUserAndMain.css">
+<script>
+    var AllFiles = @Html.Raw(userInfoJson);
+    Pnp.ViewItem("@ViewData["ItemId"]", "@ViewData["list"]", "@ViewData["UserName"]", "@ViewData["fullName"]", AllFiles, "@ViewData["ViewOnly"]");
+
+
+    setTimeout(function(){
+        if (document.getElementById("canvas").offsetWidth < 1500) {
+            document.getElementById("header").className = "hide";
+            document.getElementById("Footer").className = "hide";
+            document.getElementById("MainContent").style.marginTop = "5px";
+            var getSideLinks = document.getElementById("SideMenu").querySelectorAll(".SideLinks");
+            for (var i = 0; i < getSideLinks.length; i++) {
+                getSideLinks[i].className = "hide";
+            }
+            document.getElementById("filetree").style.height = "85%";
+        }
+    }, 100);
+</script>

@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Secuirty";
+    var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var AllG = jss.Serialize(ViewBag.AllGroups);
+    var AllP = jss.Serialize(ViewBag.AllPeople);
+    string version = System.Configuration.ConfigurationSettings.AppSettings.Get("Version");
+    string OnCallJS = "/Scripts/OnCall.js?v=" + version;
+    string OnCallCss = "/Content/OnCall.css?v=" + version;
+}
+
+<script type="text/javascript" src="@OnCallJS"></script>
+<link rel="stylesheet" type="text/css" href="@OnCallCss">
+
+
+<script>
+    var AllGroups = @Html.Raw(AllG);
+    var AllPeople = @Html.Raw(AllP);
+    OnCallDeskTop.DrawSecuirtyEmployee("@ViewData["id"]","@ViewData["UserName"]", AllGroups, AllPeople);
+</script>
